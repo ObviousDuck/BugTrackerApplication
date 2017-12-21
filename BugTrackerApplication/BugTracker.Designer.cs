@@ -1,6 +1,6 @@
 ﻿namespace BugTrackerApplication
 {
-    partial class Form1
+    partial class BugTracker
     {
         /// <summary>
         /// Required designer variable.
@@ -28,24 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.TesterBtn = new System.Windows.Forms.Button();
+            this.BlackBoxBtn = new System.Windows.Forms.Button();
             this.BugTrackerTitle = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.WhiteBoxBtn = new System.Windows.Forms.Button();
+            this.ProgrammerBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // TesterBtn
+            // BlackBoxBtn
             // 
-            this.TesterBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TesterBtn.Location = new System.Drawing.Point(162, 109);
-            this.TesterBtn.Name = "TesterBtn";
-            this.TesterBtn.Size = new System.Drawing.Size(205, 37);
-            this.TesterBtn.TabIndex = 0;
-            this.TesterBtn.Text = "Black Box Tester";
-            this.TesterBtn.UseVisualStyleBackColor = true;
-            this.TesterBtn.Click += new System.EventHandler(this.button1_Click);
+            this.BlackBoxBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BlackBoxBtn.Location = new System.Drawing.Point(162, 109);
+            this.BlackBoxBtn.Name = "BlackBoxBtn";
+            this.BlackBoxBtn.Size = new System.Drawing.Size(205, 37);
+            this.BlackBoxBtn.TabIndex = 0;
+            this.BlackBoxBtn.Text = "Black Box Tester";
+            this.BlackBoxBtn.UseVisualStyleBackColor = true;
+            this.BlackBoxBtn.Click += new System.EventHandler(this.BlackBoxBtn_Click);
             // 
             // BugTrackerTitle
             // 
@@ -58,34 +58,34 @@
             this.BugTrackerTitle.TabIndex = 1;
             this.BugTrackerTitle.Text = "BugTracker";
             this.BugTrackerTitle.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BugTrackerTitle.Click += new System.EventHandler(this.label1_Click);
             // 
-            // button1
+            // WhiteBoxBtn
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(162, 164);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(205, 37);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "White Box Tester";
-            this.button1.UseVisualStyleBackColor = true;
+            this.WhiteBoxBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.WhiteBoxBtn.Location = new System.Drawing.Point(162, 164);
+            this.WhiteBoxBtn.Name = "WhiteBoxBtn";
+            this.WhiteBoxBtn.Size = new System.Drawing.Size(205, 37);
+            this.WhiteBoxBtn.TabIndex = 2;
+            this.WhiteBoxBtn.Text = "White Box Tester";
+            this.WhiteBoxBtn.UseVisualStyleBackColor = true;
+            this.WhiteBoxBtn.Click += new System.EventHandler(this.WhiteBoxBtn_Click);
             // 
-            // button2
+            // ProgrammerBtn
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(162, 219);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(205, 37);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Programmer";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.ProgrammerBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ProgrammerBtn.Location = new System.Drawing.Point(162, 219);
+            this.ProgrammerBtn.Name = "ProgrammerBtn";
+            this.ProgrammerBtn.Size = new System.Drawing.Size(205, 37);
+            this.ProgrammerBtn.TabIndex = 3;
+            this.ProgrammerBtn.Text = "Programmer";
+            this.ProgrammerBtn.UseVisualStyleBackColor = true;
+
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(185, 70);
+            this.label1.Location = new System.Drawing.Point(179, 72);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(167, 20);
             this.label1.TabIndex = 4;
@@ -102,20 +102,19 @@
             this.label2.TabIndex = 5;
             this.label2.Text = "v 0.1";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // Form1
+            // BugTracker
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(537, 298);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.ProgrammerBtn);
+            this.Controls.Add(this.WhiteBoxBtn);
             this.Controls.Add(this.BugTrackerTitle);
-            this.Controls.Add(this.TesterBtn);
-            this.Name = "Form1";
+            this.Controls.Add(this.BlackBoxBtn);
+            this.Name = "BugTracker";
             this.Text = "Form1";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -124,10 +123,10 @@
 
         #endregion
 
-        private System.Windows.Forms.Button TesterBtn;
         private System.Windows.Forms.Label BugTrackerTitle;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        public System.Windows.Forms.Button BlackBoxBtn;
+        public System.Windows.Forms.Button WhiteBoxBtn;
+        public System.Windows.Forms.Button ProgrammerBtn;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
     }
