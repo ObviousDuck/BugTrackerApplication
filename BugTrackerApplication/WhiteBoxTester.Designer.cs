@@ -51,7 +51,7 @@
             this.Controls.Add(this.WhiteBoxTesterTitle);
             this.Name = "WhiteBoxTester";
             this.Text = "WhiteBoxTester";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.WhiteBoxTester_FormClosed);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.WhiteBoxTester_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 

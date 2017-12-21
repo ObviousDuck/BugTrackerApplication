@@ -17,9 +17,11 @@ namespace BugTrackerApplication
             InitializeComponent();
         }
 
-        private void WhiteBoxTester_FormClosed(object sender, FormClosedEventArgs e)
+        private void WhiteBoxTester_FormClosing(object sender, FormClosingEventArgs e)
         {
-
+            (this.Owner as BugTracker).BlackBoxBtn.Enabled = true;
+            (this.Owner as BugTracker).WhiteBoxBtn.Enabled = true;
+            (this.Owner as BugTracker).ProgrammerBtn.Enabled = true;
         }
     }
 }

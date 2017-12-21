@@ -42,7 +42,6 @@
             this.ProgrammerTitle.TabIndex = 3;
             this.ProgrammerTitle.Text = "Programmer";
             this.ProgrammerTitle.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.ProgrammerTitle.Click += new System.EventHandler(this.ProgrammerTitle_Click);
             // 
             // Programmer
             // 
@@ -52,6 +51,7 @@
             this.Controls.Add(this.ProgrammerTitle);
             this.Name = "Programmer";
             this.Text = "Programmer";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Programmer_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 

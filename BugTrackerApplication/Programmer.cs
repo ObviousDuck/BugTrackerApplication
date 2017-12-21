@@ -12,15 +12,16 @@ namespace BugTrackerApplication
 {
     public partial class Programmer : Form
     {
-        BugTracker bt = new BugTracker();
         public Programmer()
         {
             InitializeComponent();
         }
 
-        private void ProgrammerTitle_Click(object sender, EventArgs e)
+        private void Programmer_FormClosing(object sender, FormClosingEventArgs e)
         {
-
+            (this.Owner as BugTracker).BlackBoxBtn.Enabled = true;
+            (this.Owner as BugTracker).WhiteBoxBtn.Enabled = true;
+            (this.Owner as BugTracker).ProgrammerBtn.Enabled = true;
         }
     }
 }

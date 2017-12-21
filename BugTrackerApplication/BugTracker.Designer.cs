@@ -79,7 +79,7 @@
             this.ProgrammerBtn.TabIndex = 3;
             this.ProgrammerBtn.Text = "Programmer";
             this.ProgrammerBtn.UseVisualStyleBackColor = true;
-
+            this.ProgrammerBtn.Click += new System.EventHandler(this.ProgrammerBtn_Click);
             // 
             // label1
             // 

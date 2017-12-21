@@ -51,7 +51,7 @@
             this.Controls.Add(this.BlackBoxTesterTitle);
             this.Name = "BlackBoxTester";
             this.Text = "BlackBoxTester";
-            //this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.BlackBoxTester_FormClosed);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.BlackBoxTester_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 
