@@ -51,10 +51,10 @@
             // 
             this.BugTrackerTitle.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.BugTrackerTitle.AutoSize = true;
-            this.BugTrackerTitle.Font = new System.Drawing.Font("Prestige Elite Std", 30F, System.Drawing.FontStyle.Bold);
-            this.BugTrackerTitle.Location = new System.Drawing.Point(136, 9);
+            this.BugTrackerTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold);
+            this.BugTrackerTitle.Location = new System.Drawing.Point(149, 9);
             this.BugTrackerTitle.Name = "BugTrackerTitle";
-            this.BugTrackerTitle.Size = new System.Drawing.Size(260, 45);
+            this.BugTrackerTitle.Size = new System.Drawing.Size(236, 46);
             this.BugTrackerTitle.TabIndex = 1;
             this.BugTrackerTitle.Text = "BugTracker";
             this.BugTrackerTitle.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -95,10 +95,10 @@
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Prestige Elite Std", 10F, System.Drawing.FontStyle.Bold);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.label2.Location = new System.Drawing.Point(477, 273);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(48, 16);
+            this.label2.Size = new System.Drawing.Size(44, 17);
             this.label2.TabIndex = 5;
             this.label2.Text = "v 0.1";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
