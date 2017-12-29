@@ -13,43 +13,58 @@ namespace BugTrackerApplication
 {
     public partial class BlackBoxReportBug : Form
     {
-        SqlConnection mySqlConnection;
+        SqlConnection mySqlConnection = new SqlConnection("Trusted_Connection=yes;" + "database=BugTrackerDB");
         public BlackBoxReportBug()
         {
             InitializeComponent();
         }
 
-        public void insertRecord(String TesterName, String Project, String Component, String BugDescription, String reportBugString)
-        {
-            // Change to local
-            mySqlConnection = new SqlConnection(@"Data Source=F:\BugTrackerApplication-master\BugTrackerApplication-master\BugTrackerDB.mdf");
 
-            try
-            {
-                SqlCommand cmdInsert = new SqlCommand(reportBugString, mySqlConnection);
+        //public void testMethod()
+        //{
+        //    mySqlConnection = new SqlConnection(@"Data Source=F:\BugTrackerApplication-master\BugTrackerApplication-master\BugTrackerDB.mdf");
+        //    String selcmd = "SELECT * FROM Bugs ORDER BY ID";
+        //    SqlCommand cmdSelect = new SqlCommand(selcmd, mySqlConnection);
 
-                mySqlConnection.Open();
-                SqlDataReader mySqlDataReader = cmdInsert.ExecuteReader();
+        //    try
+        //    {
+        //        mySqlConnection.Open();
+        //        SqlDataReader mySqlDataReader = cmdSelect.ExecuteReader();
+        //        mySqlDataReader.Close();
+        //    }
 
-                cmdInsert.Parameters.AddWithValue("@TesterName", TesterName);
-                cmdInsert.Parameters.AddWithValue("@Project", Project);
-                cmdInsert.Parameters.AddWithValue("@Component", Component);
-                cmdInsert.Parameters.AddWithValue("@BugDescription", BugDescription);
-                cmdInsert.ExecuteNonQuery();
-            }
+        //    catch (SqlException ex)
+        //    {
+        //        MessageBox.Show(ex.Message, Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //    }
 
-            catch (SqlException ex)
-            {
-                MessageBox.Show(TesterName + " .." + ex.Message, Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
+        //}
 
-        private void BlackBoxReportBug_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            (this.Owner as BugTracker).BlackBoxBtn.Enabled = true;
-            (this.Owner as BugTracker).WhiteBoxBtn.Enabled = true;
-            (this.Owner as BugTracker).DeveloperBtn.Enabled = true;
-        }
+
+        //public void insertRecord(String TesterName, String Project, String Component, String BugDescription, String reportBugString)
+        //{
+        //    Change to local
+        //     mySqlConnection = new SqlConnection(@"Data Source=F:\BugTrackerApplication-master\BugTrackerApplication-master\BugTrackerDB.sdf");
+
+        //    try
+        //    {
+        //        SqlCommand cmdInsert = new SqlCommand(reportBugString, mySqlConnection);
+
+        //        // mySqlConnection.Open();
+        //        // SqlDataReader mySqlDataReader = cmdInsert.ExecuteReader();
+
+        //        cmdInsert.Parameters.AddWithValue("@TesterName", TesterName);
+        //        cmdInsert.Parameters.AddWithValue("@Project", Project);
+        //        cmdInsert.Parameters.AddWithValue("@Component", Component);
+        //        cmdInsert.Parameters.AddWithValue("@BugDescription", BugDescription);
+        //        cmdInsert.ExecuteNonQuery();
+        //    }
+
+        //    catch (SqlException ex)
+        //    {
+        //        MessageBox.Show(TesterName + " .." + ex.Message, Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //    }
+        //}
 
         public bool checkInputs()
         {
@@ -59,7 +74,7 @@ namespace BugTrackerApplication
                 string.IsNullOrEmpty(ProjectTxtBox.Text) ||
                 string.IsNullOrEmpty(DescriptionTxtBox.Text))
             {
-                MessageBox.Show("Please fill in all the required fields before submitting");
+                MessageBox.Show("Please fill in all the required fields before submitting the bug report.");
                 rtnvalue = false;
             }
             return (rtnvalue);
@@ -71,9 +86,17 @@ namespace BugTrackerApplication
             {
                 String reportBugString = "INSERT INTO Bugs(TesterName, Project, Component, BugDescription) VALUES (@TesterName, @Project, @Component, @BugDescription)";
                 insertRecord(TesterTxtBox.Text, ProjectTxtBox.Text, ComponentTxtBox.Text, DescriptionTxtBox.Text, reportBugString);
-                mySqlConnection.Close();
+              //  mySqlConnection.Close();
             }
 
         }
+
+        private void BlackBoxReportBug_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            (this.Owner as BugTracker).BlackBoxBtn.Enabled = true;
+            (this.Owner as BugTracker).WhiteBoxBtn.Enabled = true;
+            (this.Owner as BugTracker).DeveloperBtn.Enabled = true;
+        }
+
     }
 }
