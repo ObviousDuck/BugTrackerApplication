@@ -130,7 +130,7 @@
             this.label8.Size = new System.Drawing.Size(0, 20);
             this.label8.TabIndex = 11;
             // 
-            // WhiteBoxTester
+            // WhiteBoxReportBug
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -144,7 +144,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.WhiteBoxTesterTitle);
-            this.Name = "WhiteBoxTester";
+            this.Name = "WhiteBoxReportBug";
             this.Text = "WhiteBoxTester";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.WhiteBoxTester_FormClosing);
             this.ResumeLayout(false);
