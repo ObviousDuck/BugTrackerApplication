@@ -41,6 +41,7 @@ namespace BugTrackerApplication
             //WhiteReportBug.Owner = this;
             //WhiteReportBug.Show();
             //ButtonsEnabled(false);
+
         }
 
         private void DeveloperBtn_Click(object sender, EventArgs e)
