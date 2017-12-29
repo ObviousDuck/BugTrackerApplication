@@ -22,6 +22,7 @@ namespace BugTrackerApplication
             (this.Owner as BugTracker).BlackBoxBtn.Enabled = true;
             (this.Owner as BugTracker).WhiteBoxBtn.Enabled = true;
             (this.Owner as BugTracker).DeveloperBtn.Enabled = true;
+
         }
 
         private void SubmitBugButton_Click(object sender, EventArgs e)
