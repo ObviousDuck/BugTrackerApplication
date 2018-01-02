@@ -42,16 +42,19 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.SummaryLabel = new System.Windows.Forms.Label();
+            this.SummaryTxtBox = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // BlackBoxTesterTitle
             // 
             this.BlackBoxTesterTitle.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.BlackBoxTesterTitle.AutoSize = true;
-            this.BlackBoxTesterTitle.Font = new System.Drawing.Font("Prestige Elite Std", 20F, System.Drawing.FontStyle.Bold);
+            this.BlackBoxTesterTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold);
             this.BlackBoxTesterTitle.Location = new System.Drawing.Point(270, 22);
             this.BlackBoxTesterTitle.Name = "BlackBoxTesterTitle";
-            this.BlackBoxTesterTitle.Size = new System.Drawing.Size(206, 31);
+            this.BlackBoxTesterTitle.Size = new System.Drawing.Size(185, 31);
             this.BlackBoxTesterTitle.TabIndex = 2;
             this.BlackBoxTesterTitle.Text = "Report a Bug";
             this.BlackBoxTesterTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -90,7 +93,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(54, 210);
+            this.label4.Location = new System.Drawing.Point(54, 251);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(142, 20);
             this.label4.TabIndex = 8;
@@ -123,16 +126,16 @@
             // DescriptionTxtBox
             // 
             this.DescriptionTxtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.DescriptionTxtBox.Location = new System.Drawing.Point(202, 210);
+            this.DescriptionTxtBox.Location = new System.Drawing.Point(202, 251);
             this.DescriptionTxtBox.Multiline = true;
             this.DescriptionTxtBox.Name = "DescriptionTxtBox";
-            this.DescriptionTxtBox.Size = new System.Drawing.Size(437, 197);
+            this.DescriptionTxtBox.Size = new System.Drawing.Size(437, 163);
             this.DescriptionTxtBox.TabIndex = 3;
             // 
             // UploadAttachmentButton
             // 
             this.UploadAttachmentButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.UploadAttachmentButton.Location = new System.Drawing.Point(202, 420);
+            this.UploadAttachmentButton.Location = new System.Drawing.Point(202, 425);
             this.UploadAttachmentButton.Name = "UploadAttachmentButton";
             this.UploadAttachmentButton.Size = new System.Drawing.Size(160, 36);
             this.UploadAttachmentButton.TabIndex = 4;
@@ -177,17 +180,49 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.label7.ForeColor = System.Drawing.Color.Red;
-            this.label7.Location = new System.Drawing.Point(44, 206);
+            this.label7.Location = new System.Drawing.Point(44, 246);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(15, 20);
             this.label7.TabIndex = 11;
             this.label7.Text = "*";
+            // 
+            // SummaryLabel
+            // 
+            this.SummaryLabel.AutoSize = true;
+            this.SummaryLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SummaryLabel.Location = new System.Drawing.Point(116, 210);
+            this.SummaryLabel.Name = "SummaryLabel";
+            this.SummaryLabel.Size = new System.Drawing.Size(80, 20);
+            this.SummaryLabel.TabIndex = 12;
+            this.SummaryLabel.Text = "Summary:";
+            // 
+            // SummaryTxtBox
+            // 
+            this.SummaryTxtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.SummaryTxtBox.Location = new System.Drawing.Point(202, 210);
+            this.SummaryTxtBox.Name = "SummaryTxtBox";
+            this.SummaryTxtBox.Size = new System.Drawing.Size(288, 23);
+            this.SummaryTxtBox.TabIndex = 13;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label8.ForeColor = System.Drawing.Color.Red;
+            this.label8.Location = new System.Drawing.Point(106, 207);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(15, 20);
+            this.label8.TabIndex = 14;
+            this.label8.Text = "*";
             // 
             // BlackBoxReportBug
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(737, 523);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.SummaryTxtBox);
+            this.Controls.Add(this.SummaryLabel);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -226,5 +261,8 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label SummaryLabel;
+        private System.Windows.Forms.TextBox SummaryTxtBox;
+        private System.Windows.Forms.Label label8;
     }
 }
