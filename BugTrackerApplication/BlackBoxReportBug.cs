@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 
+
 namespace BugTrackerApplication
 {
     public partial class BlackBoxReportBug : Form
@@ -24,7 +25,7 @@ namespace BugTrackerApplication
             mySqlConnection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\c3439024\Documents\BugTrackerDB.mdf;Integrated Security=True;Connect Timeout=30");
             mySqlConnection.Open();
         }
-
+        
         public bool checkInputs()
         {
             bool rtnvalue = true;

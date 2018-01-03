@@ -222,8 +222,10 @@
             this.AttachmentTxtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.AttachmentTxtBox.Location = new System.Drawing.Point(202, 425);
             this.AttachmentTxtBox.Name = "AttachmentTxtBox";
+            this.AttachmentTxtBox.ReadOnly = true;
             this.AttachmentTxtBox.Size = new System.Drawing.Size(288, 23);
             this.AttachmentTxtBox.TabIndex = 15;
+            this.AttachmentTxtBox.TabStop = false;
             // 
             // BlackBoxReportBug
             // 
