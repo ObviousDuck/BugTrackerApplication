@@ -21,7 +21,7 @@ namespace BugTrackerApplication
         public BlackBoxReportBug()
         {
             InitializeComponent();
-            mySqlConnection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\andre\Documents\BugTrackerDB.mdf;Integrated Security=True;Connect Timeout=30");
+            mySqlConnection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\c3439024\Documents\BugTrackerDB.mdf;Integrated Security=True;Connect Timeout=30");
             mySqlConnection.Open();
         }
 
@@ -43,11 +43,19 @@ namespace BugTrackerApplication
                 else
                 {
                     cmd = "INSERT INTO Bugs (TesterName, DateLogged, Project, Component, Summary, Description) VALUES ('"
-                        + TesterTxtBox.Text + "', '" + ProjectTxtBox.Text + "' ,'" + ComponentTxtBox.Text + "' ,'" + SummaryTxtBox.Text + "' ,'" + DescriptionTxtBox.Text + "' ,'" + DateTime.Now.ToString("dd-MM-yy HH:mm") + "')";
+                        + TesterTxtBox.Text.ToString() + "', '" + ProjectTxtBox.Text.ToString() + "' ,'" + ComponentTxtBox.Text.ToString() + "' ,'" + SummaryTxtBox.Text.ToString() +
+                        "' ,'" + DescriptionTxtBox.Text.ToString() + "' ,'" + DateTime.Now.ToString("dd-MM-yy HH:mm") + "')";
 
                     mySqlCommand = new SqlCommand(cmd, mySqlConnection);
-
                     mySqlDataReader = mySqlCommand.ExecuteReader();
+
+                    MessageBox.Show("Bug successfully logged!");
+
+                    TesterTxtBox.Clear();
+                    ProjectTxtBox.Clear();
+                    ComponentTxtBox.Clear();
+                    DescriptionTxtBox.Clear();
+                    SummaryTxtBox.Clear();
                 }
                 
             }
@@ -62,11 +70,7 @@ namespace BugTrackerApplication
 
         private void ReportBugButton_Click(object sender, EventArgs e)
         {
-            if (checkInputs())
-            {
-                
-            }
-
+            checkInputs();
         }
 
         private void BlackBoxReportBug_FormClosing(object sender, FormClosingEventArgs e)
@@ -74,7 +78,26 @@ namespace BugTrackerApplication
             (this.Owner as BugTracker).BlackBoxBtn.Enabled = true;
             (this.Owner as BugTracker).WhiteBoxBtn.Enabled = true;
             (this.Owner as BugTracker).DeveloperBtn.Enabled = true;
+            mySqlConnection.Close();
         }
 
+        private void UploadAttachmentButton_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog attachment = new OpenFileDialog();
+            attachment.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp)|*.jpg; *.jpeg; *.gif; *.bmp";
+
+            if (attachment.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    AttachmentTxtBox.Text = attachment.FileName;
+                }
+
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message.ToString());
+                }
+            }
+        }
     }
 }
