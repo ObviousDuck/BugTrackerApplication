@@ -31,11 +31,12 @@ namespace BugTrackerApplication
             bool rtnvalue = true;
             try
             {
-                if (
-                string.IsNullOrEmpty(TesterTxtBox.Text) ||
-                string.IsNullOrEmpty(ProjectTxtBox.Text) ||
-                string.IsNullOrEmpty(DescriptionTxtBox.Text) ||
-                string.IsNullOrEmpty(SummaryTxtBox.Text))
+                if 
+                (
+                    string.IsNullOrEmpty(TesterTxtBox.Text) ||
+                    string.IsNullOrEmpty(ProjectTxtBox.Text) ||
+                    string.IsNullOrEmpty(DescriptionTxtBox.Text) ||
+                    string.IsNullOrEmpty(SummaryTxtBox.Text))
                 {
                     MessageBox.Show("Please fill in all the required fields before submitting the bug report.");
                     rtnvalue = false;
@@ -44,19 +45,15 @@ namespace BugTrackerApplication
                 else
                 {
                     cmd = "INSERT INTO Bugs (TesterName, DateLogged, Project, Component, Summary, Description) VALUES ('"
-                        + TesterTxtBox.Text.ToString() + "', '" + ProjectTxtBox.Text.ToString() + "' ,'" + ComponentTxtBox.Text.ToString() + "' ,'" + SummaryTxtBox.Text.ToString() +
-                        "' ,'" + DescriptionTxtBox.Text.ToString() + "' ,'" + DateTime.Now.ToString("dd-MM-yy HH:mm") + "')";
+                        + DateTime.Now.ToString("dd-MM-yy HH:mm") + "', '" + TesterTxtBox.Text.ToString() + "' ,'" + ProjectTxtBox.Text.ToString() +
+                        "' ,'" + ComponentTxtBox.Text.ToString() + "' ,'" + SummaryTxtBox.Text.ToString() + "' ,'" + DescriptionTxtBox.Text.ToString() + "')";
 
                     mySqlCommand = new SqlCommand(cmd, mySqlConnection);
                     mySqlDataReader = mySqlCommand.ExecuteReader();
 
                     MessageBox.Show("Bug successfully logged!");
 
-                    TesterTxtBox.Clear();
-                    ProjectTxtBox.Clear();
-                    ComponentTxtBox.Clear();
-                    DescriptionTxtBox.Clear();
-                    SummaryTxtBox.Clear();
+                    ClearTxtBoxes(this.Controls);
                 }
                 
             }
@@ -67,6 +64,18 @@ namespace BugTrackerApplication
             }
 
             return (rtnvalue);
+        }
+
+        public void ClearTxtBoxes(Control.ControlCollection cc)
+        {
+            foreach (Control ctrl in cc)
+            {
+                TextBox tb = ctrl as TextBox;
+                if (tb != null)
+                    tb.Text = "";
+                else
+                    ClearTxtBoxes(ctrl.Controls);
+            }
         }
 
         private void ReportBugButton_Click(object sender, EventArgs e)

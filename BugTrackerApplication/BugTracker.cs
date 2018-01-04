@@ -37,11 +37,6 @@ namespace BugTrackerApplication
         private void WhiteBoxBtn_Click(object sender, EventArgs e)
         {
             TesterType = 2;
-            //WhiteBoxReportBug WhiteReportBug = new WhiteBoxReportBug();
-            //WhiteReportBug.Owner = this;
-            //WhiteReportBug.Show();
-            //ButtonsEnabled(false);
-
         }
 
         private void DeveloperBtn_Click(object sender, EventArgs e)

@@ -49,6 +49,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="assignedTo.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>assignedTo.xsd</DependentUpon>
+    </Compile>
     <Compile Include="BlackBoxReportBug.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -61,6 +66,12 @@
     <Compile Include="BugTracker.Designer.cs">
       <DependentUpon>BugTracker.cs</DependentUpon>
     </Compile>
+    <Compile Include="DeveloperViewBug.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeveloperViewBug.Designer.cs">
+      <DependentUpon>DeveloperViewBug.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="DeveloperReportBug.cs">
       <SubType>Form</SubType>
@@ -69,6 +80,11 @@
       <DependentUpon>DeveloperReportBug.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TesterName.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TesterName.xsd</DependentUpon>
+    </Compile>
     <Compile Include="WhiteBoxReportBug.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,6 +100,9 @@
     <EmbeddedResource Include="DeveloperReportBug.resx">
       <DependentUpon>DeveloperReportBug.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DeveloperViewBug.resx">
+      <DependentUpon>DeveloperViewBug.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -96,6 +115,17 @@
     <EmbeddedResource Include="WhiteBoxReportBug.resx">
       <DependentUpon>WhiteBoxReportBug.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="assignedTo.xsc">
+      <DependentUpon>assignedTo.xsd</DependentUpon>
+    </None>
+    <None Include="assignedTo.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>assignedTo.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="assignedTo.xss">
+      <DependentUpon>assignedTo.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -105,6 +135,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="TesterName.xsc">
+      <DependentUpon>TesterName.xsd</DependentUpon>
+    </None>
+    <None Include="TesterName.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TesterName.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TesterName.xss">
+      <DependentUpon>TesterName.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

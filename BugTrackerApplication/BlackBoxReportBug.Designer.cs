@@ -251,7 +251,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.BlackBoxTesterTitle);
             this.Name = "BlackBoxReportBug";
-            this.Text = "BlackBoxTester";
+            this.Text = "Report Bug";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.BlackBoxReportBug_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
