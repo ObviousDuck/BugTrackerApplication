@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.label8 = new System.Windows.Forms.Label();
             this.SummaryTxtBox = new System.Windows.Forms.TextBox();
             this.SummaryLabel = new System.Windows.Forms.Label();
@@ -64,6 +63,8 @@
             this.uploadCode = new System.Windows.Forms.Button();
             this.EtaTxtBox = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
+            this.TesterTxtBox = new System.Windows.Forms.ComboBox();
+            this.AssignToTxtBox = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label8
@@ -408,13 +409,30 @@
             this.label20.Size = new System.Drawing.Size(75, 20);
             this.label20.TabIndex = 53;
             this.label20.Text = "8hrs = 1d";
-
+            // 
+            // TesterTxtBox
+            // 
+            this.TesterTxtBox.FormattingEnabled = true;
+            this.TesterTxtBox.Location = new System.Drawing.Point(247, 89);
+            this.TesterTxtBox.Name = "TesterTxtBox";
+            this.TesterTxtBox.Size = new System.Drawing.Size(288, 21);
+            this.TesterTxtBox.TabIndex = 56;
+            // 
+            // AssignToTxtBox
+            // 
+            this.AssignToTxtBox.FormattingEnabled = true;
+            this.AssignToTxtBox.Location = new System.Drawing.Point(247, 279);
+            this.AssignToTxtBox.Name = "AssignToTxtBox";
+            this.AssignToTxtBox.Size = new System.Drawing.Size(288, 21);
+            this.AssignToTxtBox.TabIndex = 57;
             // 
             // WhiteBoxReportBug
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(779, 989);
+            this.Controls.Add(this.AssignToTxtBox);
+            this.Controls.Add(this.TesterTxtBox);
             this.Controls.Add(this.label20);
             this.Controls.Add(this.EtaTxtBox);
             this.Controls.Add(this.uploadCode);
@@ -496,7 +514,7 @@
         private System.Windows.Forms.Button uploadCode;
         private System.Windows.Forms.TextBox EtaTxtBox;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.TextBox TesterTxtBox;
-        private System.Windows.Forms.TextBox AssignToTxtBox;
+        private System.Windows.Forms.ComboBox TesterTxtBox;
+        private System.Windows.Forms.ComboBox AssignToTxtBox;
     }
 }

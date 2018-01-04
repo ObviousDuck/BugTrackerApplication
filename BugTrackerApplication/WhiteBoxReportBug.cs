@@ -55,7 +55,7 @@ namespace BugTrackerApplication
 
                     mySqlCommand = new SqlCommand(cmd, mySqlConnection);
                     mySqlDataReader = mySqlCommand.ExecuteReader();
-
+                  
                     MessageBox.Show("Bug successfully logged!");
                     
                     ClearTxtBoxes(this.Controls);
