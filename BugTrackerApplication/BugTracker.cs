@@ -62,12 +62,16 @@ namespace BugTrackerApplication
                 ButtonsEnabled(false);
             }
 
+            else if (TesterType == 3)
+            {
+                WhiteBoxReportBug WhiteReportBug = new WhiteBoxReportBug();
+                WhiteReportBug.Owner = this;
+                WhiteReportBug.Show();
+                ButtonsEnabled(false);
+            }
             else
             {
-                DeveloperReportBug Developer = new DeveloperReportBug();
-                Developer.Owner = this;
-                Developer.Show();
-                ButtonsEnabled(false);
+                MessageBox.Show("Please select your role first!");
             }
         }
 
