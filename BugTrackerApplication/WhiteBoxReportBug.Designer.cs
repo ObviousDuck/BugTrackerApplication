@@ -64,33 +64,6 @@
             this.uploadCode = new System.Windows.Forms.Button();
             this.EtaTxtBox = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
-            this.AssignToTxtBox = new System.Windows.Forms.ComboBox();
-            this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.bugTrackerDBDataSet = new BugTrackerApplication.BugTrackerDBDataSet();
-            this.usersTableAdapter = new BugTrackerApplication.BugTrackerDBDataSetTableAdapters.UsersTableAdapter();
-            this.users = new BugTrackerApplication.Users();
-            this.usersBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.usersTableAdapter1 = new BugTrackerApplication.UsersTableAdapters.UsersTableAdapter();
-            this.TesterTxtBox = new System.Windows.Forms.ComboBox();
-            this.bugTrackerDBDataSet2 = new BugTrackerApplication.BugTrackerDBDataSet2();
-            this.usersBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.usersTableAdapter2 = new BugTrackerApplication.BugTrackerDBDataSet2TableAdapters.UsersTableAdapter();
-            this.testerName = new BugTrackerApplication.TesterName();
-            this.usersBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
-            this.usersTableAdapter3 = new BugTrackerApplication.TesterNameTableAdapters.UsersTableAdapter();
-            this.assignedTo = new BugTrackerApplication.assignedTo();
-            this.usersBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
-            this.usersTableAdapter4 = new BugTrackerApplication.assignedToTableAdapters.UsersTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bugTrackerDBDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.users)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bugTrackerDBDataSet2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.testerName)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.assignedTo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource4)).BeginInit();
             this.SuspendLayout();
             // 
             // label8
@@ -435,107 +408,13 @@
             this.label20.Size = new System.Drawing.Size(75, 20);
             this.label20.TabIndex = 53;
             this.label20.Text = "8hrs = 1d";
-            // 
-            // AssignToTxtBox
-            // 
-            this.AssignToTxtBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.usersBindingSource, "FirstName", true));
-            this.AssignToTxtBox.DataSource = this.usersBindingSource4;
-            this.AssignToTxtBox.DisplayMember = "Name";
-            this.AssignToTxtBox.FormattingEnabled = true;
-            this.AssignToTxtBox.Location = new System.Drawing.Point(247, 279);
-            this.AssignToTxtBox.Name = "AssignToTxtBox";
-            this.AssignToTxtBox.Size = new System.Drawing.Size(288, 21);
-            this.AssignToTxtBox.TabIndex = 54;
-            this.AssignToTxtBox.ValueMember = "Name";
-            // 
-            // usersBindingSource
-            // 
-            this.usersBindingSource.DataMember = "Users";
-            this.usersBindingSource.DataSource = this.bugTrackerDBDataSet;
-            // 
-            // bugTrackerDBDataSet
-            // 
-            this.bugTrackerDBDataSet.DataSetName = "BugTrackerDBDataSet";
-            this.bugTrackerDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // usersTableAdapter
-            // 
-            this.usersTableAdapter.ClearBeforeFill = true;
-            // 
-            // users
-            // 
-            this.users.DataSetName = "Users";
-            this.users.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // usersBindingSource1
-            // 
-            this.usersBindingSource1.DataMember = "Users";
-            this.usersBindingSource1.DataSource = this.users;
-            // 
-            // usersTableAdapter1
-            // 
-            this.usersTableAdapter1.ClearBeforeFill = true;
-            // 
-            // TesterTxtBox
-            // 
-            this.TesterTxtBox.DataSource = this.usersBindingSource3;
-            this.TesterTxtBox.DisplayMember = "Name";
-            this.TesterTxtBox.FormattingEnabled = true;
-            this.TesterTxtBox.Location = new System.Drawing.Point(247, 88);
-            this.TesterTxtBox.Name = "TesterTxtBox";
-            this.TesterTxtBox.Size = new System.Drawing.Size(288, 21);
-            this.TesterTxtBox.TabIndex = 55;
-            this.TesterTxtBox.ValueMember = "Name";
-            // 
-            // bugTrackerDBDataSet2
-            // 
-            this.bugTrackerDBDataSet2.DataSetName = "BugTrackerDBDataSet2";
-            this.bugTrackerDBDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // usersBindingSource2
-            // 
-            this.usersBindingSource2.DataMember = "Users";
-            this.usersBindingSource2.DataSource = this.bugTrackerDBDataSet2;
-            // 
-            // usersTableAdapter2
-            // 
-            this.usersTableAdapter2.ClearBeforeFill = true;
-            // 
-            // testerName
-            // 
-            this.testerName.DataSetName = "TesterName";
-            this.testerName.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // usersBindingSource3
-            // 
-            this.usersBindingSource3.DataMember = "Users";
-            this.usersBindingSource3.DataSource = this.testerName;
-            // 
-            // usersTableAdapter3
-            // 
-            this.usersTableAdapter3.ClearBeforeFill = true;
-            // 
-            // assignedTo
-            // 
-            this.assignedTo.DataSetName = "assignedTo";
-            this.assignedTo.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // usersBindingSource4
-            // 
-            this.usersBindingSource4.DataMember = "Users";
-            this.usersBindingSource4.DataSource = this.assignedTo;
-            // 
-            // usersTableAdapter4
-            // 
-            this.usersTableAdapter4.ClearBeforeFill = true;
+
             // 
             // WhiteBoxReportBug
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(779, 989);
-            this.Controls.Add(this.TesterTxtBox);
-            this.Controls.Add(this.AssignToTxtBox);
             this.Controls.Add(this.label20);
             this.Controls.Add(this.EtaTxtBox);
             this.Controls.Add(this.uploadCode);
@@ -575,16 +454,6 @@
             this.Text = "Report Bug";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.WhiteBoxTester_FormClosing);
             this.Load += new System.EventHandler(this.WhiteBoxReportBug_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bugTrackerDBDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.users)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bugTrackerDBDataSet2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.testerName)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.assignedTo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -627,22 +496,7 @@
         private System.Windows.Forms.Button uploadCode;
         private System.Windows.Forms.TextBox EtaTxtBox;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.ComboBox AssignToTxtBox;
-        private BugTrackerDBDataSet bugTrackerDBDataSet;
-        private System.Windows.Forms.BindingSource usersBindingSource;
-        private BugTrackerDBDataSetTableAdapters.UsersTableAdapter usersTableAdapter;
-        private Users users;
-        private System.Windows.Forms.BindingSource usersBindingSource1;
-        private UsersTableAdapters.UsersTableAdapter usersTableAdapter1;
-        private System.Windows.Forms.ComboBox TesterTxtBox;
-        private BugTrackerDBDataSet2 bugTrackerDBDataSet2;
-        private System.Windows.Forms.BindingSource usersBindingSource2;
-        private BugTrackerDBDataSet2TableAdapters.UsersTableAdapter usersTableAdapter2;
-        private TesterName testerName;
-        private System.Windows.Forms.BindingSource usersBindingSource3;
-        private TesterNameTableAdapters.UsersTableAdapter usersTableAdapter3;
-        private assignedTo assignedTo;
-        private System.Windows.Forms.BindingSource usersBindingSource4;
-        private assignedToTableAdapters.UsersTableAdapter usersTableAdapter4;
+        private System.Windows.Forms.TextBox TesterTxtBox;
+        private System.Windows.Forms.TextBox AssignToTxtBox;
     }
 }

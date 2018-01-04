@@ -131,9 +131,7 @@ namespace BugTrackerApplication
         }
 
         private void WhiteBoxReportBug_Load(object sender, EventArgs e)
-        {
-            this.usersTableAdapter3.Fill(this.testerName.Users);
-            this.usersTableAdapter4.Fill(this.assignedTo.Users);   
+        { 
         }
     }
 }
