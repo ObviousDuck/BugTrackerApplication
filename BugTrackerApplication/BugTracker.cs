@@ -24,6 +24,11 @@ namespace BugTrackerApplication
             InitializeComponent();
         }
 
+        public void setLoggedInLabel(string name)
+        {
+            LoggedInAsLabel.Text = name;
+        }
+
         public void BlackBoxBtn_Click(object sender, EventArgs e)
         {
             TesterType = 1;

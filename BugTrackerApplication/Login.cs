@@ -16,6 +16,7 @@ namespace BugTrackerApplication
     {
         SqlConnection mySqlConnection;
         BugTracker BugTracker;
+        string name;
 
         public Login(BugTracker BugTracker)
         {
@@ -30,7 +31,7 @@ namespace BugTrackerApplication
         {
             try
             {
-                SqlCommand cmd = new SqlCommand(@"SELECT Count(*), isAdmin FROM Users WHERE Username = @username AND Password = @password GROUP BY isAdmin", mySqlConnection);
+                SqlCommand cmd = new SqlCommand(@"SELECT Count(*), isAdmin, Name FROM Users WHERE Username = @username AND Password = @password GROUP BY isAdmin, Name", mySqlConnection);
                 cmd.Parameters.AddWithValue("@username", UsernameTxtBox.Text);
                 cmd.Parameters.AddWithValue("@password", PasswordTxtBox.Text);
                 int result = (int)cmd.ExecuteScalar();
@@ -41,8 +42,10 @@ namespace BugTrackerApplication
                     while (mySqlDataReader.Read())
                     {
                         BugTracker.isAdmin = (int)mySqlDataReader["isAdmin"];
+                        name = (string)mySqlDataReader["Name"];
                     }
                     MessageBox.Show("Login Successful!");
+                    BugTracker.setLoggedInLabel(name);
                     BugTracker.isLoggedIn = true;
                     this.Close();
                 }
