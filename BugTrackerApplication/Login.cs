@@ -21,7 +21,8 @@ namespace BugTrackerApplication
         public Login(BugTracker BugTracker)
         {
             InitializeComponent();
-            mySqlConnection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=F:\BugTrackerApplication\BugTrackerDB.mdf;Integrated Security=True;Connect Timeout=30");
+            string path = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=" + Application.StartupPath + "\\BugTrackerDB.mdf;Integrated Security=True";
+            mySqlConnection = new SqlConnection(path);
             mySqlConnection.Open();
             this.BugTracker = BugTracker;
             BugTracker.Hide();

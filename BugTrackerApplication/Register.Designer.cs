@@ -34,6 +34,9 @@
             this.PasswordTxtBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.UsernameTxtBox = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.NameTxtBox = new System.Windows.Forms.TextBox();
+            this.isAdminCheckBox = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // label1
@@ -41,7 +44,7 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(33, 9);
+            this.label1.Location = new System.Drawing.Point(37, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(250, 31);
             this.label1.TabIndex = 19;
@@ -51,18 +54,19 @@
             // RegisterButton
             // 
             this.RegisterButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.RegisterButton.Location = new System.Drawing.Point(116, 170);
+            this.RegisterButton.Location = new System.Drawing.Point(116, 263);
             this.RegisterButton.Name = "RegisterButton";
             this.RegisterButton.Size = new System.Drawing.Size(85, 36);
             this.RegisterButton.TabIndex = 23;
             this.RegisterButton.Text = "Register";
             this.RegisterButton.UseVisualStyleBackColor = true;
+            this.RegisterButton.Click += new System.EventHandler(this.RegisterButton_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label3.Location = new System.Drawing.Point(119, 109);
+            this.label3.Location = new System.Drawing.Point(119, 164);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(82, 20);
             this.label3.TabIndex = 25;
@@ -71,7 +75,7 @@
             // PasswordTxtBox
             // 
             this.PasswordTxtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.PasswordTxtBox.Location = new System.Drawing.Point(67, 132);
+            this.PasswordTxtBox.Location = new System.Drawing.Point(70, 187);
             this.PasswordTxtBox.Name = "PasswordTxtBox";
             this.PasswordTxtBox.Size = new System.Drawing.Size(176, 23);
             this.PasswordTxtBox.TabIndex = 21;
@@ -80,7 +84,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label2.Location = new System.Drawing.Point(117, 53);
+            this.label2.Location = new System.Drawing.Point(117, 108);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(87, 20);
             this.label2.TabIndex = 24;
@@ -89,16 +93,47 @@
             // UsernameTxtBox
             // 
             this.UsernameTxtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.UsernameTxtBox.Location = new System.Drawing.Point(67, 76);
+            this.UsernameTxtBox.Location = new System.Drawing.Point(70, 131);
             this.UsernameTxtBox.Name = "UsernameTxtBox";
             this.UsernameTxtBox.Size = new System.Drawing.Size(176, 23);
             this.UsernameTxtBox.TabIndex = 20;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label4.Location = new System.Drawing.Point(132, 56);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(55, 20);
+            this.label4.TabIndex = 27;
+            this.label4.Text = "Name:";
+            // 
+            // NameTxtBox
+            // 
+            this.NameTxtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.NameTxtBox.Location = new System.Drawing.Point(70, 79);
+            this.NameTxtBox.Name = "NameTxtBox";
+            this.NameTxtBox.Size = new System.Drawing.Size(176, 23);
+            this.NameTxtBox.TabIndex = 26;
+            // 
+            // isAdminCheckBox
+            // 
+            this.isAdminCheckBox.AutoSize = true;
+            this.isAdminCheckBox.Location = new System.Drawing.Point(109, 232);
+            this.isAdminCheckBox.Name = "isAdminCheckBox";
+            this.isAdminCheckBox.Size = new System.Drawing.Size(102, 17);
+            this.isAdminCheckBox.TabIndex = 28;
+            this.isAdminCheckBox.Text = "Create as admin";
+            this.isAdminCheckBox.UseVisualStyleBackColor = true;
             // 
             // Register
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(315, 227);
+            this.ClientSize = new System.Drawing.Size(315, 319);
+            this.Controls.Add(this.isAdminCheckBox);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.NameTxtBox);
             this.Controls.Add(this.RegisterButton);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.PasswordTxtBox);
@@ -107,6 +142,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Register";
             this.Text = "Register";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Register_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -120,5 +156,8 @@
         private System.Windows.Forms.TextBox PasswordTxtBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox UsernameTxtBox;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox NameTxtBox;
+        private System.Windows.Forms.CheckBox isAdminCheckBox;
     }
 }

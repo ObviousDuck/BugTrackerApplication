@@ -12,7 +12,7 @@ using System.Data.SqlClient;
 
 namespace BugTrackerApplication
 {
-    public partial class BlackBoxReportBug : Form
+    public partial class TesterReportBug : Form
     {
         SqlConnection mySqlConnection;
         SqlCommand mySqlCommand;
@@ -20,7 +20,7 @@ namespace BugTrackerApplication
         String cmd;
         BugTracker BugTracker;
 
-        public BlackBoxReportBug(BugTracker BugTracker)
+        public TesterReportBug(BugTracker BugTracker)
         {
             InitializeComponent();
             mySqlConnection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=F:\BugTrackerApplication\BugTrackerDB.mdf;Integrated Security=True;Connect Timeout=30");

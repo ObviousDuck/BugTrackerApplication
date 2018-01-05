@@ -1,6 +1,6 @@
 ﻿namespace BugTrackerApplication
 {
-    partial class DeveloperViewBug
+    partial class TesterDeveloperViewBug
     {
         /// <summary>
         /// Required designer variable.

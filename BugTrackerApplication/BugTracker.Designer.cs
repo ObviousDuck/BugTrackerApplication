@@ -28,10 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.BlackBoxBtn = new System.Windows.Forms.Button();
+            this.TesterBtn = new System.Windows.Forms.Button();
             this.BugTrackerTitle = new System.Windows.Forms.Label();
-            this.WhiteBoxBtn = new System.Windows.Forms.Button();
-            this.DeveloperBtn = new System.Windows.Forms.Button();
+            this.TesterDeveloperBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -47,21 +46,21 @@
             // 
             // BlackBoxBtn
             // 
-            this.BlackBoxBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BlackBoxBtn.Location = new System.Drawing.Point(53, 109);
-            this.BlackBoxBtn.Name = "BlackBoxBtn";
-            this.BlackBoxBtn.Size = new System.Drawing.Size(181, 37);
-            this.BlackBoxBtn.TabIndex = 0;
-            this.BlackBoxBtn.Text = "Black Box Tester";
-            this.BlackBoxBtn.UseVisualStyleBackColor = true;
-            this.BlackBoxBtn.Click += new System.EventHandler(this.BlackBoxBtn_Click);
+            this.TesterBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TesterBtn.Location = new System.Drawing.Point(68, 105);
+            this.TesterBtn.Name = "BlackBoxBtn";
+            this.TesterBtn.Size = new System.Drawing.Size(181, 37);
+            this.TesterBtn.TabIndex = 0;
+            this.TesterBtn.Text = "Tester";
+            this.TesterBtn.UseVisualStyleBackColor = true;
+            this.TesterBtn.Click += new System.EventHandler(this.BlackBoxBtn_Click);
             // 
             // BugTrackerTitle
             // 
             this.BugTrackerTitle.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.BugTrackerTitle.AutoSize = true;
             this.BugTrackerTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold);
-            this.BugTrackerTitle.Location = new System.Drawing.Point(222, 9);
+            this.BugTrackerTitle.Location = new System.Drawing.Point(145, 9);
             this.BugTrackerTitle.Name = "BugTrackerTitle";
             this.BugTrackerTitle.Size = new System.Drawing.Size(236, 46);
             this.BugTrackerTitle.TabIndex = 1;
@@ -70,31 +69,20 @@
             // 
             // WhiteBoxBtn
             // 
-            this.WhiteBoxBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.WhiteBoxBtn.Location = new System.Drawing.Point(254, 109);
-            this.WhiteBoxBtn.Name = "WhiteBoxBtn";
-            this.WhiteBoxBtn.Size = new System.Drawing.Size(181, 37);
-            this.WhiteBoxBtn.TabIndex = 2;
-            this.WhiteBoxBtn.Text = "White Box Tester";
-            this.WhiteBoxBtn.UseVisualStyleBackColor = true;
-            this.WhiteBoxBtn.Click += new System.EventHandler(this.WhiteBoxBtn_Click);
-            // 
-            // DeveloperBtn
-            // 
-            this.DeveloperBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DeveloperBtn.Location = new System.Drawing.Point(458, 109);
-            this.DeveloperBtn.Name = "DeveloperBtn";
-            this.DeveloperBtn.Size = new System.Drawing.Size(181, 37);
-            this.DeveloperBtn.TabIndex = 3;
-            this.DeveloperBtn.Text = "Developer";
-            this.DeveloperBtn.UseVisualStyleBackColor = true;
-            this.DeveloperBtn.Click += new System.EventHandler(this.DeveloperBtn_Click);
+            this.TesterDeveloperBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TesterDeveloperBtn.Location = new System.Drawing.Point(278, 105);
+            this.TesterDeveloperBtn.Name = "WhiteBoxBtn";
+            this.TesterDeveloperBtn.Size = new System.Drawing.Size(181, 37);
+            this.TesterDeveloperBtn.TabIndex = 2;
+            this.TesterDeveloperBtn.Text = "Tester/Developer";
+            this.TesterDeveloperBtn.UseVisualStyleBackColor = true;
+            this.TesterDeveloperBtn.Click += new System.EventHandler(this.WhiteBoxBtn_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(263, 69);
+            this.label1.Location = new System.Drawing.Point(178, 69);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(167, 20);
             this.label1.TabIndex = 4;
@@ -105,7 +93,7 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(635, 423);
+            this.label2.Location = new System.Drawing.Point(472, 423);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(44, 17);
             this.label2.TabIndex = 5;
@@ -116,7 +104,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(242, 280);
+            this.label3.Location = new System.Drawing.Point(168, 265);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(197, 20);
             this.label3.TabIndex = 6;
@@ -125,7 +113,7 @@
             // ReportBugButton
             // 
             this.ReportBugButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.ReportBugButton.Location = new System.Drawing.Point(359, 313);
+            this.ReportBugButton.Location = new System.Drawing.Point(278, 301);
             this.ReportBugButton.Name = "ReportBugButton";
             this.ReportBugButton.Size = new System.Drawing.Size(181, 37);
             this.ReportBugButton.TabIndex = 7;
@@ -136,7 +124,7 @@
             // FindBugButton
             // 
             this.FindBugButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.FindBugButton.Location = new System.Drawing.Point(359, 373);
+            this.FindBugButton.Location = new System.Drawing.Point(278, 361);
             this.FindBugButton.Name = "FindBugButton";
             this.FindBugButton.Size = new System.Drawing.Size(181, 37);
             this.FindBugButton.TabIndex = 8;
@@ -147,7 +135,7 @@
             // LoginBtn
             // 
             this.LoginBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.LoginBtn.Location = new System.Drawing.Point(149, 313);
+            this.LoginBtn.Location = new System.Drawing.Point(68, 301);
             this.LoginBtn.Name = "LoginBtn";
             this.LoginBtn.Size = new System.Drawing.Size(181, 37);
             this.LoginBtn.TabIndex = 9;
@@ -158,7 +146,7 @@
             // RegisterBtn
             // 
             this.RegisterBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.RegisterBtn.Location = new System.Drawing.Point(149, 373);
+            this.RegisterBtn.Location = new System.Drawing.Point(68, 361);
             this.RegisterBtn.Name = "RegisterBtn";
             this.RegisterBtn.Size = new System.Drawing.Size(181, 37);
             this.RegisterBtn.TabIndex = 10;
@@ -170,7 +158,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(49, 188);
+            this.label4.Location = new System.Drawing.Point(66, 169);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(144, 20);
             this.label4.TabIndex = 11;
@@ -180,7 +168,7 @@
             // 
             this.RoleLabel.AutoSize = true;
             this.RoleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RoleLabel.Location = new System.Drawing.Point(199, 188);
+            this.RoleLabel.Location = new System.Drawing.Point(216, 169);
             this.RoleLabel.Name = "RoleLabel";
             this.RoleLabel.Size = new System.Drawing.Size(59, 20);
             this.RoleLabel.TabIndex = 12;
@@ -191,7 +179,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(49, 217);
+            this.label5.Location = new System.Drawing.Point(66, 198);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(158, 20);
             this.label5.TabIndex = 13;
@@ -201,7 +189,7 @@
             // 
             this.LoggedInAsLabel.AutoSize = true;
             this.LoggedInAsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LoggedInAsLabel.Location = new System.Drawing.Point(213, 217);
+            this.LoggedInAsLabel.Location = new System.Drawing.Point(230, 198);
             this.LoggedInAsLabel.Name = "LoggedInAsLabel";
             this.LoggedInAsLabel.Size = new System.Drawing.Size(60, 20);
             this.LoggedInAsLabel.TabIndex = 14;
@@ -211,7 +199,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(691, 449);
+            this.ClientSize = new System.Drawing.Size(528, 449);
             this.Controls.Add(this.LoggedInAsLabel);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.RoleLabel);
@@ -223,10 +211,9 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.DeveloperBtn);
-            this.Controls.Add(this.WhiteBoxBtn);
+            this.Controls.Add(this.TesterDeveloperBtn);
             this.Controls.Add(this.BugTrackerTitle);
-            this.Controls.Add(this.BlackBoxBtn);
+            this.Controls.Add(this.TesterBtn);
             this.Name = "BugTracker";
             this.Text = "BugTracker";
             this.ResumeLayout(false);
@@ -237,9 +224,8 @@
         #endregion
 
         private System.Windows.Forms.Label BugTrackerTitle;
-        public System.Windows.Forms.Button BlackBoxBtn;
-        public System.Windows.Forms.Button WhiteBoxBtn;
-        public System.Windows.Forms.Button DeveloperBtn;
+        public System.Windows.Forms.Button TesterBtn;
+        public System.Windows.Forms.Button TesterDeveloperBtn;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;

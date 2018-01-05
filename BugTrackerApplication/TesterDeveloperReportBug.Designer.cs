@@ -1,6 +1,6 @@
 ﻿namespace BugTrackerApplication
 {
-    partial class WhiteBoxReportBug
+    partial class TesterDeveloperReportBug
     {
         /// <summary>
         /// Required designer variable.
@@ -423,15 +423,12 @@
             // 
             // TesterTxtBox
             // 
-            this.TesterTxtBox.DataSource = this.usersBindingSource;
-            this.TesterTxtBox.DisplayMember = "Name";
             this.TesterTxtBox.FormattingEnabled = true;
             this.TesterTxtBox.Location = new System.Drawing.Point(247, 89);
             this.TesterTxtBox.MaxDropDownItems = 100;
             this.TesterTxtBox.Name = "TesterTxtBox";
             this.TesterTxtBox.Size = new System.Drawing.Size(288, 21);
             this.TesterTxtBox.TabIndex = 56;
-            this.TesterTxtBox.ValueMember = "Name";
             // 
             // usersBindingSource
             // 
@@ -445,14 +442,11 @@
             // 
             // AssignToTxtBox
             // 
-            this.AssignToTxtBox.DataSource = this.usersBindingSource1;
-            this.AssignToTxtBox.DisplayMember = "Name";
             this.AssignToTxtBox.FormattingEnabled = true;
             this.AssignToTxtBox.Location = new System.Drawing.Point(248, 279);
             this.AssignToTxtBox.Name = "AssignToTxtBox";
             this.AssignToTxtBox.Size = new System.Drawing.Size(288, 21);
             this.AssignToTxtBox.TabIndex = 57;
-            this.AssignToTxtBox.ValueMember = "Name";
             // 
             // usersBindingSource1
             // 
@@ -472,7 +466,7 @@
             // 
             this.usersTableAdapter1.ClearBeforeFill = true;
             // 
-            // WhiteBoxReportBug
+            // TesterDeveloperReportBug
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -514,7 +508,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Name = "WhiteBoxReportBug";
+            this.Name = "TesterDeveloperReportBug";
             this.Text = "Report Bug";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.WhiteBoxTester_FormClosing);
             this.Load += new System.EventHandler(this.WhiteBoxReportBug_Load);

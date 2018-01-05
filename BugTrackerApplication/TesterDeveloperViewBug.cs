@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace BugTrackerApplication
 {
-    public partial class DeveloperViewBug : Form
+    public partial class TesterDeveloperViewBug : Form
     {
-        public DeveloperViewBug()
+        public TesterDeveloperViewBug()
         {
             InitializeComponent();
         }

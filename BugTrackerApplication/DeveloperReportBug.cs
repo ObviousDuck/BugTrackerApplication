@@ -19,9 +19,7 @@ namespace BugTrackerApplication
 
         private void Developer_FormClosing(object sender, FormClosingEventArgs e)
         {
-            (this.Owner as BugTracker).BlackBoxBtn.Enabled = true;
-            (this.Owner as BugTracker).WhiteBoxBtn.Enabled = true;
-            (this.Owner as BugTracker).DeveloperBtn.Enabled = true;
+            
         }
     }
 }

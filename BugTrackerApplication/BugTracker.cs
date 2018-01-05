@@ -15,7 +15,7 @@ namespace BugTrackerApplication
     /// </summary>
     public partial class BugTracker : Form
     {
-        public int TesterType = 0;
+        public int TesterType;
         public bool isLoggedIn = false;
         public int isAdmin = 0;
 
@@ -32,42 +32,29 @@ namespace BugTrackerApplication
         public void BlackBoxBtn_Click(object sender, EventArgs e)
         {
             TesterType = 1;
-            RoleLabel.Text = "Black Box Tester";
+            RoleLabel.Text = "Tester";
         }
 
         private void WhiteBoxBtn_Click(object sender, EventArgs e)
         {
             TesterType = 2;
-            RoleLabel.Text = "White Box Tester";
-        }
-
-        private void DeveloperBtn_Click(object sender, EventArgs e)
-        {
-            TesterType = 3;
-            RoleLabel.Text = "Developer";
+            RoleLabel.Text = "Tester/Developer";
         }
 
         private void ReportBugButton_Click(object sender, EventArgs e)
         {
             if (TesterType == 1)
             {
-                BlackBoxReportBug BlackBT = new BlackBoxReportBug(this);
-                BlackBT.Owner = this;
-                BlackBT.Show();
+                TesterReportBug TesterReportBug = new TesterReportBug(this);
+                TesterReportBug.Owner = this;
+                TesterReportBug.Show();
             }
 
             else if (TesterType == 2)
             {
-                WhiteBoxReportBug WhiteReportBug = new WhiteBoxReportBug(this);
-                WhiteReportBug.Owner = this;
-                WhiteReportBug.Show();
-            }
-
-            else if (TesterType == 3)
-            {
-                WhiteBoxReportBug WhiteReportBug = new WhiteBoxReportBug(this);
-                WhiteReportBug.Owner = this;
-                WhiteReportBug.Show();
+                TesterDeveloperReportBug TesterDeveloperReportBug = new TesterDeveloperReportBug(this);
+                TesterDeveloperReportBug.Owner = this;
+                TesterDeveloperReportBug.Show();
             }
             else
             {
@@ -87,22 +74,7 @@ namespace BugTrackerApplication
                 if (isLoggedIn == true)
                 {
                     Login loginForm = new Login(this);
-                    WhiteBoxReportBug WhiteReportBug = new WhiteBoxReportBug(this);
-                    WhiteReportBug.Owner = this;
-                    WhiteReportBug.Show();
-                }
-                else
-                {
-                    MessageBox.Show("Please login to access.");
-                }
-            }
-
-            else if (TesterType == 3)
-            {
-                if (isLoggedIn == true)
-                {
-                    Login loginForm = new Login(this);
-                    DeveloperViewBug developerViewBug = new DeveloperViewBug();
+                    TesterDeveloperViewBug developerViewBug = new TesterDeveloperViewBug();
                     developerViewBug.Owner = this;
                     developerViewBug.Show();
                 }
@@ -111,6 +83,7 @@ namespace BugTrackerApplication
                     MessageBox.Show("Please login to access.");
                 }
             }
+
             else
             {
                 MessageBox.Show("Please select your role first!");
@@ -128,10 +101,11 @@ namespace BugTrackerApplication
         {
             if (isLoggedIn == true && isAdmin == 1)
             { 
-            Register registerForm = new Register();
+            Register registerForm = new Register(this);
             registerForm.Owner = this;
             registerForm.Show();
-            } else
+            }
+            else
             {
                 MessageBox.Show("Admin rights required to register a new user, please login with an administrator account.");
             }

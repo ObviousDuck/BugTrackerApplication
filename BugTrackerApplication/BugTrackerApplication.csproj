@@ -72,11 +72,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AssignedToName.xsd</DependentUpon>
     </Compile>
-    <Compile Include="BlackBoxReportBug.cs">
+    <Compile Include="TesterReportBug.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BlackBoxReportBug.Designer.cs">
-      <DependentUpon>BlackBoxReportBug.cs</DependentUpon>
+    <Compile Include="TesterReportBug.Designer.cs">
+      <DependentUpon>TesterReportBug.cs</DependentUpon>
     </Compile>
     <Compile Include="BugTracker.cs">
       <SubType>Form</SubType>
@@ -84,11 +84,11 @@
     <Compile Include="BugTracker.Designer.cs">
       <DependentUpon>BugTracker.cs</DependentUpon>
     </Compile>
-    <Compile Include="DeveloperViewBug.cs">
+    <Compile Include="TesterDeveloperViewBug.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DeveloperViewBug.Designer.cs">
-      <DependentUpon>DeveloperViewBug.cs</DependentUpon>
+    <Compile Include="TesterDeveloperViewBug.Designer.cs">
+      <DependentUpon>TesterDeveloperViewBug.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -115,14 +115,14 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>TesterName.xsd</DependentUpon>
     </Compile>
-    <Compile Include="WhiteBoxReportBug.cs">
+    <Compile Include="TesterDeveloperReportBug.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="WhiteBoxReportBug.Designer.cs">
-      <DependentUpon>WhiteBoxReportBug.cs</DependentUpon>
+    <Compile Include="TesterDeveloperReportBug.Designer.cs">
+      <DependentUpon>TesterDeveloperReportBug.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="BlackBoxReportBug.resx">
-      <DependentUpon>BlackBoxReportBug.cs</DependentUpon>
+    <EmbeddedResource Include="TesterReportBug.resx">
+      <DependentUpon>TesterReportBug.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BugTracker.resx">
       <DependentUpon>BugTracker.cs</DependentUpon>
@@ -130,8 +130,8 @@
     <EmbeddedResource Include="DeveloperReportBug.resx">
       <DependentUpon>DeveloperReportBug.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DeveloperViewBug.resx">
-      <DependentUpon>DeveloperViewBug.cs</DependentUpon>
+    <EmbeddedResource Include="TesterDeveloperViewBug.resx">
+      <DependentUpon>TesterDeveloperViewBug.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -148,8 +148,8 @@
     <EmbeddedResource Include="Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="WhiteBoxReportBug.resx">
-      <DependentUpon>WhiteBoxReportBug.cs</DependentUpon>
+    <EmbeddedResource Include="TesterDeveloperReportBug.resx">
+      <DependentUpon>TesterDeveloperReportBug.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="AssignedToName.xsc">
       <DependentUpon>AssignedToName.xsd</DependentUpon>
