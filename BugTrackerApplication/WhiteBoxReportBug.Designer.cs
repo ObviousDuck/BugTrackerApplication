@@ -65,17 +65,17 @@
             this.EtaTxtBox = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
             this.TesterTxtBox = new System.Windows.Forms.ComboBox();
-            this.AssignToTxtBox = new System.Windows.Forms.ComboBox();
-            this.testerName = new BugTrackerApplication.TesterName();
             this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.usersTableAdapter = new BugTrackerApplication.TesterNameTableAdapters.UsersTableAdapter();
-            this.assignedToName = new BugTrackerApplication.AssignedToName();
+            this.testerName = new BugTrackerApplication.TesterName();
+            this.AssignToTxtBox = new System.Windows.Forms.ComboBox();
             this.usersBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.assignedToName = new BugTrackerApplication.AssignedToName();
+            this.usersTableAdapter = new BugTrackerApplication.TesterNameTableAdapters.UsersTableAdapter();
             this.usersTableAdapter1 = new BugTrackerApplication.AssignedToNameTableAdapters.UsersTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.testerName)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.assignedToName)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.testerName)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.assignedToName)).BeginInit();
             this.SuspendLayout();
             // 
             // label8
@@ -433,6 +433,16 @@
             this.TesterTxtBox.TabIndex = 56;
             this.TesterTxtBox.ValueMember = "Name";
             // 
+            // usersBindingSource
+            // 
+            this.usersBindingSource.DataMember = "Users";
+            this.usersBindingSource.DataSource = this.testerName;
+            // 
+            // testerName
+            // 
+            this.testerName.DataSetName = "TesterName";
+            this.testerName.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // AssignToTxtBox
             // 
             this.AssignToTxtBox.DataSource = this.usersBindingSource1;
@@ -444,29 +454,19 @@
             this.AssignToTxtBox.TabIndex = 57;
             this.AssignToTxtBox.ValueMember = "Name";
             // 
-            // testerName
+            // usersBindingSource1
             // 
-            this.testerName.DataSetName = "TesterName";
-            this.testerName.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // usersBindingSource
-            // 
-            this.usersBindingSource.DataMember = "Users";
-            this.usersBindingSource.DataSource = this.testerName;
-            // 
-            // usersTableAdapter
-            // 
-            this.usersTableAdapter.ClearBeforeFill = true;
+            this.usersBindingSource1.DataMember = "Users";
+            this.usersBindingSource1.DataSource = this.assignedToName;
             // 
             // assignedToName
             // 
             this.assignedToName.DataSetName = "AssignedToName";
             this.assignedToName.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // usersBindingSource1
+            // usersTableAdapter
             // 
-            this.usersBindingSource1.DataMember = "Users";
-            this.usersBindingSource1.DataSource = this.assignedToName;
+            this.usersTableAdapter.ClearBeforeFill = true;
             // 
             // usersTableAdapter1
             // 
@@ -518,10 +518,10 @@
             this.Text = "Report Bug";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.WhiteBoxTester_FormClosing);
             this.Load += new System.EventHandler(this.WhiteBoxReportBug_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.testerName)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.assignedToName)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.testerName)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.assignedToName)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

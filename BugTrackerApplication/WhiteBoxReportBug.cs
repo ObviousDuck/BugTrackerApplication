@@ -24,7 +24,7 @@ namespace BugTrackerApplication
         public WhiteBoxReportBug(BugTracker BugTracker)
         {
             InitializeComponent();
-            mySqlConnection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\c3439024\Documents\BugTrackerDB.mdf;Integrated Security=True;Connect Timeout=30");
+            mySqlConnection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=F:\BugTrackerApplication\BugTrackerDB.mdf;Integrated Security=True;Connect Timeout=30");
             mySqlConnection.Open();
             this.BugTracker = BugTracker;
             BugTracker.Hide();

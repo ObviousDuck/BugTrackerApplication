@@ -71,6 +71,7 @@
             this.PasswordTxtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.PasswordTxtBox.Location = new System.Drawing.Point(74, 133);
             this.PasswordTxtBox.Name = "PasswordTxtBox";
+            this.PasswordTxtBox.PasswordChar = '*';
             this.PasswordTxtBox.Size = new System.Drawing.Size(176, 23);
             this.PasswordTxtBox.TabIndex = 1;
             this.PasswordTxtBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Login_KeyPress);
