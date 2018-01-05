@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label8 = new System.Windows.Forms.Label();
             this.SummaryTxtBox = new System.Windows.Forms.TextBox();
             this.SummaryLabel = new System.Windows.Forms.Label();
@@ -65,6 +66,16 @@
             this.label20 = new System.Windows.Forms.Label();
             this.TesterTxtBox = new System.Windows.Forms.ComboBox();
             this.AssignToTxtBox = new System.Windows.Forms.ComboBox();
+            this.testerName = new BugTrackerApplication.TesterName();
+            this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.usersTableAdapter = new BugTrackerApplication.TesterNameTableAdapters.UsersTableAdapter();
+            this.assignedToName = new BugTrackerApplication.AssignedToName();
+            this.usersBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.usersTableAdapter1 = new BugTrackerApplication.AssignedToNameTableAdapters.UsersTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.testerName)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.assignedToName)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // label8
@@ -221,7 +232,7 @@
             this.BlackBoxTesterTitle.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.BlackBoxTesterTitle.AutoSize = true;
             this.BlackBoxTesterTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold);
-            this.BlackBoxTesterTitle.Location = new System.Drawing.Point(311, 24);
+            this.BlackBoxTesterTitle.Location = new System.Drawing.Point(301, 20);
             this.BlackBoxTesterTitle.Name = "BlackBoxTesterTitle";
             this.BlackBoxTesterTitle.Size = new System.Drawing.Size(185, 31);
             this.BlackBoxTesterTitle.TabIndex = 31;
@@ -412,19 +423,54 @@
             // 
             // TesterTxtBox
             // 
+            this.TesterTxtBox.DataSource = this.usersBindingSource;
+            this.TesterTxtBox.DisplayMember = "Name";
             this.TesterTxtBox.FormattingEnabled = true;
             this.TesterTxtBox.Location = new System.Drawing.Point(247, 89);
+            this.TesterTxtBox.MaxDropDownItems = 100;
             this.TesterTxtBox.Name = "TesterTxtBox";
             this.TesterTxtBox.Size = new System.Drawing.Size(288, 21);
             this.TesterTxtBox.TabIndex = 56;
+            this.TesterTxtBox.ValueMember = "Name";
             // 
             // AssignToTxtBox
             // 
+            this.AssignToTxtBox.DataSource = this.usersBindingSource1;
+            this.AssignToTxtBox.DisplayMember = "Name";
             this.AssignToTxtBox.FormattingEnabled = true;
-            this.AssignToTxtBox.Location = new System.Drawing.Point(247, 279);
+            this.AssignToTxtBox.Location = new System.Drawing.Point(248, 279);
             this.AssignToTxtBox.Name = "AssignToTxtBox";
             this.AssignToTxtBox.Size = new System.Drawing.Size(288, 21);
             this.AssignToTxtBox.TabIndex = 57;
+            this.AssignToTxtBox.ValueMember = "Name";
+            // 
+            // testerName
+            // 
+            this.testerName.DataSetName = "TesterName";
+            this.testerName.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // usersBindingSource
+            // 
+            this.usersBindingSource.DataMember = "Users";
+            this.usersBindingSource.DataSource = this.testerName;
+            // 
+            // usersTableAdapter
+            // 
+            this.usersTableAdapter.ClearBeforeFill = true;
+            // 
+            // assignedToName
+            // 
+            this.assignedToName.DataSetName = "AssignedToName";
+            this.assignedToName.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // usersBindingSource1
+            // 
+            this.usersBindingSource1.DataMember = "Users";
+            this.usersBindingSource1.DataSource = this.assignedToName;
+            // 
+            // usersTableAdapter1
+            // 
+            this.usersTableAdapter1.ClearBeforeFill = true;
             // 
             // WhiteBoxReportBug
             // 
@@ -472,6 +518,10 @@
             this.Text = "Report Bug";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.WhiteBoxTester_FormClosing);
             this.Load += new System.EventHandler(this.WhiteBoxReportBug_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.testerName)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.assignedToName)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -516,5 +566,11 @@
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.ComboBox TesterTxtBox;
         private System.Windows.Forms.ComboBox AssignToTxtBox;
+        private TesterName testerName;
+        private System.Windows.Forms.BindingSource usersBindingSource;
+        private TesterNameTableAdapters.UsersTableAdapter usersTableAdapter;
+        private AssignedToName assignedToName;
+        private System.Windows.Forms.BindingSource usersBindingSource1;
+        private AssignedToNameTableAdapters.UsersTableAdapter usersTableAdapter1;
     }
 }

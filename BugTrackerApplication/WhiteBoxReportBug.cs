@@ -19,12 +19,15 @@ namespace BugTrackerApplication
         SqlCommand mySqlCommand;
         SqlDataReader mySqlDataReader;
         String cmd;
+        BugTracker BugTracker;
 
-        public WhiteBoxReportBug()
+        public WhiteBoxReportBug(BugTracker BugTracker)
         {
             InitializeComponent();
             mySqlConnection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\c3439024\Documents\BugTrackerDB.mdf;Integrated Security=True;Connect Timeout=30");
             mySqlConnection.Open();
+            this.BugTracker = BugTracker;
+            BugTracker.Hide();
         }
 
         public bool checkInputs()
@@ -84,10 +87,8 @@ namespace BugTrackerApplication
 
         private void WhiteBoxTester_FormClosing(object sender, FormClosingEventArgs e)
         {
-            (this.Owner as BugTracker).BlackBoxBtn.Enabled = true;
-            (this.Owner as BugTracker).WhiteBoxBtn.Enabled = true;
-            (this.Owner as BugTracker).DeveloperBtn.Enabled = true;
             mySqlConnection.Close();
+            BugTracker.Show();
         }
         /// <summary>
         /// Some code that does things
@@ -98,7 +99,7 @@ namespace BugTrackerApplication
             CodeSnippetTxtBox.Text = colourizedSourceCode;
 
             string html = ("<!doctype html><head><meta charset=\"utf-8\" <title> Code Snippet </title> </head> <body>" + colourizedSourceCode + "</body></html>");
-            System.IO.File.WriteAllText(@"C:\Users\c3439024\Documents\FormattedCode.html", html);
+            File.WriteAllText(@"C:\Users\c3439024\Documents\FormattedCode.html", html);
         }
 
         private void uploadCode_Click(object sender, EventArgs e)
@@ -131,7 +132,11 @@ namespace BugTrackerApplication
         }
 
         private void WhiteBoxReportBug_Load(object sender, EventArgs e)
-        { 
+        {
+            // TODO: This line of code loads data into the 'assignedToName.Users' table. You can move, or remove it, as needed.
+            this.usersTableAdapter1.Fill(this.assignedToName.Users);
+            // TODO: This line of code loads data into the 'testerName.Users' table. You can move, or remove it, as needed.
+            this.usersTableAdapter.Fill(this.testerName.Users);
         }
     }
 }

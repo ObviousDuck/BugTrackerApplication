@@ -18,12 +18,15 @@ namespace BugTrackerApplication
         SqlCommand mySqlCommand;
         SqlDataReader mySqlDataReader;
         String cmd;
+        BugTracker BugTracker;
 
-        public BlackBoxReportBug()
+        public BlackBoxReportBug(BugTracker BugTracker)
         {
             InitializeComponent();
             mySqlConnection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\c3439024\Documents\BugTrackerDB.mdf;Integrated Security=True;Connect Timeout=30");
             mySqlConnection.Open();
+            this.BugTracker = BugTracker;
+            BugTracker.Hide();
         }
         
         public bool checkInputs()
@@ -85,9 +88,7 @@ namespace BugTrackerApplication
 
         private void BlackBoxReportBug_FormClosing(object sender, FormClosingEventArgs e)
         {
-            (this.Owner as BugTracker).BlackBoxBtn.Enabled = true;
-            (this.Owner as BugTracker).WhiteBoxBtn.Enabled = true;
-            (this.Owner as BugTracker).DeveloperBtn.Enabled = true;
+            BugTracker.Show();
             mySqlConnection.Close();
         }
 
