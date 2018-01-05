@@ -15,12 +15,7 @@ namespace BugTrackerApplication
     public partial class Login : Form
     {
         SqlConnection mySqlConnection;
-        SqlCommand mySqlCommand;
-        SqlDataReader mySqlDataReader;
-        String cmd;
         BugTracker BugTracker;
-
-        
 
         public Login(BugTracker BugTracker)
         {
@@ -31,17 +26,22 @@ namespace BugTrackerApplication
             BugTracker.Hide();
         }
 
-        private void LoginButton_Click(object sender, EventArgs e)
+        private void ConfirmLogin()
         {
             try
             {
-                SqlCommand cmd = new SqlCommand(@"SELECT Count(*) FROM Users WHERE Username = @username AND Password = @password", mySqlConnection);
+                SqlCommand cmd = new SqlCommand(@"SELECT Count(*), isAdmin FROM Users WHERE Username = @username AND Password = @password GROUP BY isAdmin", mySqlConnection);
                 cmd.Parameters.AddWithValue("@username", UsernameTxtBox.Text);
                 cmd.Parameters.AddWithValue("@password", PasswordTxtBox.Text);
                 int result = (int)cmd.ExecuteScalar();
 
                 if (result > 0)
                 {
+                    SqlDataReader mySqlDataReader = cmd.ExecuteReader();
+                    while (mySqlDataReader.Read())
+                    {
+                        BugTracker.isAdmin = (int)mySqlDataReader["isAdmin"];
+                    }
                     MessageBox.Show("Login Successful!");
                     BugTracker.isLoggedIn = true;
                     this.Close();
@@ -51,40 +51,31 @@ namespace BugTrackerApplication
                 {
                     MessageBox.Show("Login failed. Please check your inputs.");
                 }
-                
+
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Unexpected error occurred.");
+                MessageBox.Show(ex.Message);
             }
         }
 
-
-        private void RegisterButton_Click(object sender, EventArgs e)
+        private void LoginButton_Click(object sender, EventArgs e)
         {
-            BugTracker bugTracker = new BugTracker();
-            try
-            {
-                if (bugTracker.TesterType == 3)
-                {
-                    var registerForm = new Register();
-                    registerForm.Show();
-                }
-                else
-                {
-                    MessageBox.Show("Only users with admin privileges can create users. Please log in as an admin user first.");
-                }
-            }
-            catch
-            {
-                MessageBox.Show("Unexpected error occurred.");
-            }
+            ConfirmLogin();
         }
 
         private void Login_FormClosing(object sender, FormClosingEventArgs e)
         {
             mySqlConnection.Close();
             BugTracker.Show();
+        }
+
+        private void Login_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+            {
+                ConfirmLogin();
+            }
         }
     }
 }

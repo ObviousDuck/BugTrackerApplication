@@ -41,6 +41,8 @@
             this.RegisterBtn = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.RoleLabel = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.LoggedInAsLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // BlackBoxBtn
@@ -114,7 +116,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(247, 244);
+            this.label3.Location = new System.Drawing.Point(242, 280);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(197, 20);
             this.label3.TabIndex = 6;
@@ -123,7 +125,7 @@
             // ReportBugButton
             // 
             this.ReportBugButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.ReportBugButton.Location = new System.Drawing.Point(364, 277);
+            this.ReportBugButton.Location = new System.Drawing.Point(359, 313);
             this.ReportBugButton.Name = "ReportBugButton";
             this.ReportBugButton.Size = new System.Drawing.Size(181, 37);
             this.ReportBugButton.TabIndex = 7;
@@ -134,7 +136,7 @@
             // FindBugButton
             // 
             this.FindBugButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.FindBugButton.Location = new System.Drawing.Point(364, 337);
+            this.FindBugButton.Location = new System.Drawing.Point(359, 373);
             this.FindBugButton.Name = "FindBugButton";
             this.FindBugButton.Size = new System.Drawing.Size(181, 37);
             this.FindBugButton.TabIndex = 8;
@@ -145,7 +147,7 @@
             // LoginBtn
             // 
             this.LoginBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.LoginBtn.Location = new System.Drawing.Point(154, 277);
+            this.LoginBtn.Location = new System.Drawing.Point(149, 313);
             this.LoginBtn.Name = "LoginBtn";
             this.LoginBtn.Size = new System.Drawing.Size(181, 37);
             this.LoginBtn.TabIndex = 9;
@@ -156,7 +158,7 @@
             // RegisterBtn
             // 
             this.RegisterBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.RegisterBtn.Location = new System.Drawing.Point(154, 337);
+            this.RegisterBtn.Location = new System.Drawing.Point(149, 373);
             this.RegisterBtn.Name = "RegisterBtn";
             this.RegisterBtn.Size = new System.Drawing.Size(181, 37);
             this.RegisterBtn.TabIndex = 10;
@@ -168,7 +170,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(200, 188);
+            this.label4.Location = new System.Drawing.Point(49, 188);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(144, 20);
             this.label4.TabIndex = 11;
@@ -178,18 +180,40 @@
             // 
             this.RoleLabel.AutoSize = true;
             this.RoleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RoleLabel.Location = new System.Drawing.Point(350, 188);
+            this.RoleLabel.Location = new System.Drawing.Point(199, 188);
             this.RoleLabel.Name = "RoleLabel";
             this.RoleLabel.Size = new System.Drawing.Size(59, 20);
             this.RoleLabel.TabIndex = 12;
             this.RoleLabel.Text = "No role";
             this.RoleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(49, 217);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(158, 20);
+            this.label5.TabIndex = 13;
+            this.label5.Text = "You are logged in as:";
+            // 
+            // LoggedInAsLabel
+            // 
+            this.LoggedInAsLabel.AutoSize = true;
+            this.LoggedInAsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LoggedInAsLabel.Location = new System.Drawing.Point(213, 217);
+            this.LoggedInAsLabel.Name = "LoggedInAsLabel";
+            this.LoggedInAsLabel.Size = new System.Drawing.Size(60, 20);
+            this.LoggedInAsLabel.TabIndex = 14;
+            this.LoggedInAsLabel.Text = "No one";
+            // 
             // BugTracker
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(691, 449);
+            this.Controls.Add(this.LoggedInAsLabel);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.RoleLabel);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.RegisterBtn);
@@ -225,6 +249,8 @@
         private System.Windows.Forms.Button RegisterBtn;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label RoleLabel;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label LoggedInAsLabel;
     }
 }
 

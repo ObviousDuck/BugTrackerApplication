@@ -34,7 +34,6 @@
             this.PasswordTxtBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.LoginButton = new System.Windows.Forms.Button();
-            this.RegisterButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // UsernameTxtBox
@@ -74,6 +73,7 @@
             this.PasswordTxtBox.Name = "PasswordTxtBox";
             this.PasswordTxtBox.Size = new System.Drawing.Size(176, 23);
             this.PasswordTxtBox.TabIndex = 1;
+            this.PasswordTxtBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Login_KeyPress);
             // 
             // label3
             // 
@@ -96,23 +96,11 @@
             this.LoginButton.UseVisualStyleBackColor = true;
             this.LoginButton.Click += new System.EventHandler(this.LoginButton_Click);
             // 
-            // RegisterButton
-            // 
-            this.RegisterButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.RegisterButton.Location = new System.Drawing.Point(118, 224);
-            this.RegisterButton.Name = "RegisterButton";
-            this.RegisterButton.Size = new System.Drawing.Size(85, 36);
-            this.RegisterButton.TabIndex = 3;
-            this.RegisterButton.Text = "Register";
-            this.RegisterButton.UseVisualStyleBackColor = true;
-            this.RegisterButton.Click += new System.EventHandler(this.RegisterButton_Click);
-            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(315, 292);
-            this.Controls.Add(this.RegisterButton);
+            this.ClientSize = new System.Drawing.Size(315, 221);
             this.Controls.Add(this.LoginButton);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.PasswordTxtBox);
@@ -122,6 +110,7 @@
             this.Name = "Login";
             this.Text = "Login";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Login_FormClosing);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Login_KeyPress);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -135,6 +124,5 @@
         private System.Windows.Forms.TextBox PasswordTxtBox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button LoginButton;
-        private System.Windows.Forms.Button RegisterButton;
     }
 }

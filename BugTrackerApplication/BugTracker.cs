@@ -17,6 +17,7 @@ namespace BugTrackerApplication
     {
         public int TesterType = 0;
         public bool isLoggedIn = false;
+        public int isAdmin = 0;
 
         public BugTracker()
         {
@@ -78,8 +79,6 @@ namespace BugTrackerApplication
 
             else if (TesterType == 2)
             {
-                
-
                 if (isLoggedIn == true)
                 {
                     Login loginForm = new Login(this);
@@ -95,8 +94,6 @@ namespace BugTrackerApplication
 
             else if (TesterType == 3)
             {
-                
-
                 if (isLoggedIn == true)
                 {
                     Login loginForm = new Login(this);
@@ -124,9 +121,15 @@ namespace BugTrackerApplication
 
         private void RegisterBtn_Click(object sender, EventArgs e)
         {
+            if (isLoggedIn == true && isAdmin == 1)
+            { 
             Register registerForm = new Register();
             registerForm.Owner = this;
             registerForm.Show();
+            } else
+            {
+                MessageBox.Show("Admin rights required to register a new user, please login with an administrator account.");
+            }
         }
     }
 }
