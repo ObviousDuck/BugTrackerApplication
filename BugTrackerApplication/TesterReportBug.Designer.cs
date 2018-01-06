@@ -33,7 +33,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.TesterTxtBox = new System.Windows.Forms.TextBox();
             this.ProjectTxtBox = new System.Windows.Forms.TextBox();
             this.ComponentTxtBox = new System.Windows.Forms.TextBox();
             this.DescriptionTxtBox = new System.Windows.Forms.TextBox();
@@ -46,6 +45,7 @@
             this.SummaryTxtBox = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.AttachmentTxtBox = new System.Windows.Forms.TextBox();
+            this.TesterTxtBox = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // BlackBoxTesterTitle
@@ -99,14 +99,6 @@
             this.label4.Size = new System.Drawing.Size(142, 20);
             this.label4.TabIndex = 8;
             this.label4.Text = "Description of bug:";
-            // 
-            // TesterTxtBox
-            // 
-            this.TesterTxtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.TesterTxtBox.Location = new System.Drawing.Point(202, 84);
-            this.TesterTxtBox.Name = "TesterTxtBox";
-            this.TesterTxtBox.Size = new System.Drawing.Size(288, 23);
-            this.TesterTxtBox.TabIndex = 0;
             // 
             // ProjectTxtBox
             // 
@@ -227,11 +219,21 @@
             this.AttachmentTxtBox.TabIndex = 15;
             this.AttachmentTxtBox.TabStop = false;
             // 
-            // BlackBoxReportBug
+            // TesterTxtBox
+            // 
+            this.TesterTxtBox.FormattingEnabled = true;
+            this.TesterTxtBox.Location = new System.Drawing.Point(202, 83);
+            this.TesterTxtBox.MaxDropDownItems = 100;
+            this.TesterTxtBox.Name = "TesterTxtBox";
+            this.TesterTxtBox.Size = new System.Drawing.Size(288, 21);
+            this.TesterTxtBox.TabIndex = 57;
+            // 
+            // TesterReportBug
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(737, 561);
+            this.Controls.Add(this.TesterTxtBox);
             this.Controls.Add(this.AttachmentTxtBox);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.SummaryTxtBox);
@@ -244,13 +246,12 @@
             this.Controls.Add(this.DescriptionTxtBox);
             this.Controls.Add(this.ComponentTxtBox);
             this.Controls.Add(this.ProjectTxtBox);
-            this.Controls.Add(this.TesterTxtBox);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.BlackBoxTesterTitle);
-            this.Name = "BlackBoxReportBug";
+            this.Name = "TesterReportBug";
             this.Text = "Report Bug";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.BlackBoxReportBug_FormClosing);
             this.ResumeLayout(false);
@@ -265,7 +266,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox TesterTxtBox;
         private System.Windows.Forms.TextBox ProjectTxtBox;
         private System.Windows.Forms.TextBox ComponentTxtBox;
         private System.Windows.Forms.TextBox DescriptionTxtBox;
@@ -278,5 +278,6 @@
         private System.Windows.Forms.TextBox SummaryTxtBox;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox AttachmentTxtBox;
+        private System.Windows.Forms.ComboBox TesterTxtBox;
     }
 }

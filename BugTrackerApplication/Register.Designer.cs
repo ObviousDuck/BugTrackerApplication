@@ -57,7 +57,7 @@
             this.RegisterButton.Location = new System.Drawing.Point(116, 263);
             this.RegisterButton.Name = "RegisterButton";
             this.RegisterButton.Size = new System.Drawing.Size(85, 36);
-            this.RegisterButton.TabIndex = 23;
+            this.RegisterButton.TabIndex = 4;
             this.RegisterButton.Text = "Register";
             this.RegisterButton.UseVisualStyleBackColor = true;
             this.RegisterButton.Click += new System.EventHandler(this.RegisterButton_Click);
@@ -78,7 +78,8 @@
             this.PasswordTxtBox.Location = new System.Drawing.Point(70, 187);
             this.PasswordTxtBox.Name = "PasswordTxtBox";
             this.PasswordTxtBox.Size = new System.Drawing.Size(176, 23);
-            this.PasswordTxtBox.TabIndex = 21;
+            this.PasswordTxtBox.TabIndex = 2;
+            this.PasswordTxtBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Register_KeyPress);
             // 
             // label2
             // 
@@ -96,7 +97,7 @@
             this.UsernameTxtBox.Location = new System.Drawing.Point(70, 131);
             this.UsernameTxtBox.Name = "UsernameTxtBox";
             this.UsernameTxtBox.Size = new System.Drawing.Size(176, 23);
-            this.UsernameTxtBox.TabIndex = 20;
+            this.UsernameTxtBox.TabIndex = 1;
             // 
             // label4
             // 
@@ -114,7 +115,7 @@
             this.NameTxtBox.Location = new System.Drawing.Point(70, 79);
             this.NameTxtBox.Name = "NameTxtBox";
             this.NameTxtBox.Size = new System.Drawing.Size(176, 23);
-            this.NameTxtBox.TabIndex = 26;
+            this.NameTxtBox.TabIndex = 0;
             // 
             // isAdminCheckBox
             // 
@@ -122,9 +123,10 @@
             this.isAdminCheckBox.Location = new System.Drawing.Point(109, 232);
             this.isAdminCheckBox.Name = "isAdminCheckBox";
             this.isAdminCheckBox.Size = new System.Drawing.Size(102, 17);
-            this.isAdminCheckBox.TabIndex = 28;
+            this.isAdminCheckBox.TabIndex = 3;
             this.isAdminCheckBox.Text = "Create as admin";
             this.isAdminCheckBox.UseVisualStyleBackColor = true;
+            this.isAdminCheckBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Register_KeyPress);
             // 
             // Register
             // 

@@ -23,10 +23,29 @@ namespace BugTrackerApplication
         public TesterReportBug(BugTracker BugTracker)
         {
             InitializeComponent();
+            //string path = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=" + Application.StartupPath + "\\BugTrackerDB.mdf;Integrated Security=True";
             mySqlConnection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=F:\BugTrackerApplication\BugTrackerDB.mdf;Integrated Security=True;Connect Timeout=30");
             mySqlConnection.Open();
             this.BugTracker = BugTracker;
             BugTracker.Hide();
+
+            try
+            {
+                cmd = "SELECT Name FROM Users";
+                mySqlCommand = new SqlCommand(cmd, mySqlConnection);
+                mySqlDataReader = mySqlCommand.ExecuteReader();
+                TesterTxtBox.Items.Clear();
+                while (mySqlDataReader.Read())
+                {
+                    TesterTxtBox.Items.Add(mySqlDataReader["Name"]);
+                }
+                mySqlDataReader.Close();
+            }
+
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message, Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         
         public bool checkInputs()
