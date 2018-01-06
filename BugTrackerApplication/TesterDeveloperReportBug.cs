@@ -29,6 +29,7 @@ namespace BugTrackerApplication
             mySqlConnection.Open();
             this.BugTracker = BugTracker;
             BugTracker.Hide();
+            AssignToTxtBox.Items.Add("");
 
             try
             {

@@ -32,6 +32,8 @@ namespace BugTrackerApplication
                 mySqlCommand = new SqlCommand(cmd, mySqlConnection);
                 mySqlDataReader = mySqlCommand.ExecuteReader();
                 txtTesterBox.Items.Clear();
+                txtAssignedTo.Items.Add("");
+                txtTesterBox.Items.Add("");
                 while (mySqlDataReader.Read())
                 {
                     txtTesterBox.Items.Add(mySqlDataReader["Name"]);
@@ -55,6 +57,7 @@ namespace BugTrackerApplication
                 if (!(string.IsNullOrEmpty(txtTesterBox.Text))) cmd += " TesterName=@TesterName AND ";
                 if (!(string.IsNullOrEmpty(txtProject.Text))) cmd += " Project=@Project AND ";
                 if (!(string.IsNullOrEmpty(txtAssignedTo.Text))) cmd += " AssignedTo=@AssignedTo AND ";
+                if (checkboxShowArchived.Checked) cmd += " isArchived = 1 AND "; else cmd += " isArchived = 0 AND ";
 
                 // Deletes the last 5 characters to avoid SQL syntax error with an empty AND on the end.
                 cmd = cmd.Remove(cmd.Length - 5, 5);
@@ -71,8 +74,8 @@ namespace BugTrackerApplication
                 while (mySqlDataReader.Read())
                 {
                     ListBoxBugs.Items.Add(
-                        " ID: " + mySqlDataReader["ID"] + 
-                        " Project: " + mySqlDataReader["Project"] + 
+                        mySqlDataReader["ID"] + 
+                        "- Project: " + mySqlDataReader["Project"] + 
                         " Summary: " + mySqlDataReader["Summary"]);
                 }
                 mySqlDataReader.Close();
@@ -86,7 +89,16 @@ namespace BugTrackerApplication
 
         private void btnViewDetails_Click(object sender, EventArgs e)
         {
-
+            if (!(string.IsNullOrEmpty(ListBoxBugs.Text)))
+            {
+                String[] id = ListBoxBugs.Text.Split('-');
+                BugDetails BugDetails = new BugDetails(id[0], this);
+                BugDetails.Owner = this;
+                BugDetails.Show();
+            } else
+            {
+                MessageBox.Show("Please select a bug from the list to view its details!");
+            }
         }
 
         private void TesterDeveloperViewBug_FormClosing(object sender, FormClosingEventArgs e)

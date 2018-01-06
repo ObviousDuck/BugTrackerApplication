@@ -72,6 +72,18 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AssignedToName.xsd</DependentUpon>
     </Compile>
+    <Compile Include="BugDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BugDetails.Designer.cs">
+      <DependentUpon>BugDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SyntaxedCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SyntaxedCode.Designer.cs">
+      <DependentUpon>SyntaxedCode.cs</DependentUpon>
+    </Compile>
     <Compile Include="TesterReportBug.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,12 +109,6 @@
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
-    <Compile Include="DeveloperReportBug.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DeveloperReportBug.Designer.cs">
-      <DependentUpon>DeveloperReportBug.cs</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Register.cs">
       <SubType>Form</SubType>
@@ -121,14 +127,17 @@
     <Compile Include="TesterDeveloperReportBug.Designer.cs">
       <DependentUpon>TesterDeveloperReportBug.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="BugDetails.resx">
+      <DependentUpon>BugDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SyntaxedCode.resx">
+      <DependentUpon>SyntaxedCode.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TesterReportBug.resx">
       <DependentUpon>TesterReportBug.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BugTracker.resx">
       <DependentUpon>BugTracker.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DeveloperReportBug.resx">
-      <DependentUpon>DeveloperReportBug.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TesterDeveloperViewBug.resx">
       <DependentUpon>TesterDeveloperViewBug.cs</DependentUpon>

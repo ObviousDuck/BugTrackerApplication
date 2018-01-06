@@ -10,16 +10,12 @@ using System.Windows.Forms;
 
 namespace BugTrackerApplication
 {
-    public partial class DeveloperReportBug : Form
+    public partial class SyntaxedCode : Form
     {
-        public DeveloperReportBug()
+        public SyntaxedCode(Uri uri)
         {
             InitializeComponent();
-        }
-
-        private void Developer_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            
+            browserSyntaxedCode.Navigate(uri);
         }
     }
 }
