@@ -16,8 +16,11 @@ namespace BugTrackerApplication
     public partial class BugTracker : Form
     {
         public int TesterType;
-        public bool isLoggedIn = false;
-        public int isAdmin = 0;
+        // SET TO FALSE
+        public bool isLoggedIn = true;
+
+        // SET TO 0
+        public int isAdmin = 1;
 
         public BugTracker()
         {
@@ -66,7 +69,7 @@ namespace BugTrackerApplication
         {
             if (TesterType == 1)
             {
-                MessageBox.Show("You cannot view bugs as a Black Box Tester.");
+                MessageBox.Show("You cannot view bugs as a Tester.");
             }
 
             else if (TesterType == 2)
@@ -74,7 +77,7 @@ namespace BugTrackerApplication
                 if (isLoggedIn == true)
                 {
                     Login loginForm = new Login(this);
-                    TesterDeveloperViewBug developerViewBug = new TesterDeveloperViewBug();
+                    TesterDeveloperViewBug developerViewBug = new TesterDeveloperViewBug(this);
                     developerViewBug.Owner = this;
                     developerViewBug.Show();
                 }

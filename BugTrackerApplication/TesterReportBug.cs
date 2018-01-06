@@ -66,12 +66,15 @@ namespace BugTrackerApplication
 
                 else
                 {
-                    cmd = "INSERT INTO Bugs (TesterName, DateLogged, Project, Component, Summary, Description) VALUES ('"
-                        + DateTime.Now.ToString("dd-MM-yy HH:mm") + "', '" + TesterTxtBox.Text.ToString() + "' ,'" + ProjectTxtBox.Text.ToString() +
-                        "' ,'" + ComponentTxtBox.Text.ToString() + "' ,'" + SummaryTxtBox.Text.ToString() + "' ,'" + DescriptionTxtBox.Text.ToString() + "')";
+                    SqlCommand cmd = new SqlCommand("INSERT INTO Bugs (DateLogged, TesterName, Project, Component, Summary, Description) VALUES ('"
+                        + DateTime.Now.ToString("dd-MM-yy HH:mm") + "', '" + TesterTxtBox.Text + "' , @Project, @Component, @Summary, @Description)", mySqlConnection);
 
-                    mySqlCommand = new SqlCommand(cmd, mySqlConnection);
-                    mySqlDataReader = mySqlCommand.ExecuteReader();
+                    cmd.Parameters.AddWithValue("@Project", ProjectTxtBox.Text);
+                    cmd.Parameters.AddWithValue("@Component", ComponentTxtBox.Text);
+                    cmd.Parameters.AddWithValue("@Summary", SummaryTxtBox.Text);
+                    cmd.Parameters.AddWithValue("@Description", DescriptionTxtBox.Text);
+                    MessageBox.Show(cmd.CommandText);
+                    cmd.ExecuteNonQuery();
 
                     MessageBox.Show("Bug successfully logged!");
 
