@@ -10,6 +10,10 @@ using System.Windows.Forms;
 
 namespace BugTrackerApplication
 {
+    /// <summary>
+    /// Hides the main menu and shows the About window.
+    /// On close, will show the main menu again.
+    /// </summary>
     public partial class About : Form
     {
         BugTracker BugTracker;

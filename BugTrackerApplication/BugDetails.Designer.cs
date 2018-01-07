@@ -120,6 +120,7 @@
             this.txtSourceCode.Location = new System.Drawing.Point(416, 67);
             this.txtSourceCode.Multiline = true;
             this.txtSourceCode.Name = "txtSourceCode";
+            this.txtSourceCode.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.txtSourceCode.Size = new System.Drawing.Size(480, 630);
             this.txtSourceCode.TabIndex = 67;
             // 

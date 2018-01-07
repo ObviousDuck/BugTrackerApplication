@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.label8 = new System.Windows.Forms.Label();
             this.SummaryTxtBox = new System.Windows.Forms.TextBox();
             this.SummaryLabel = new System.Windows.Forms.Label();
@@ -65,17 +64,7 @@
             this.EtaTxtBox = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
             this.TesterTxtBox = new System.Windows.Forms.ComboBox();
-            this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.testerName = new BugTrackerApplication.TesterName();
             this.AssignToTxtBox = new System.Windows.Forms.ComboBox();
-            this.usersBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.assignedToName = new BugTrackerApplication.AssignedToName();
-            this.usersTableAdapter = new BugTrackerApplication.TesterNameTableAdapters.UsersTableAdapter();
-            this.usersTableAdapter1 = new BugTrackerApplication.AssignedToNameTableAdapters.UsersTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.testerName)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.assignedToName)).BeginInit();
             this.SuspendLayout();
             // 
             // label8
@@ -168,6 +157,7 @@
             this.DescriptionTxtBox.Location = new System.Drawing.Point(247, 657);
             this.DescriptionTxtBox.Multiline = true;
             this.DescriptionTxtBox.Name = "DescriptionTxtBox";
+            this.DescriptionTxtBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.DescriptionTxtBox.Size = new System.Drawing.Size(437, 163);
             this.DescriptionTxtBox.TabIndex = 12;
             // 
@@ -304,6 +294,7 @@
             this.CodeSnippetTxtBox.Location = new System.Drawing.Point(247, 475);
             this.CodeSnippetTxtBox.Multiline = true;
             this.CodeSnippetTxtBox.Name = "CodeSnippetTxtBox";
+            this.CodeSnippetTxtBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.CodeSnippetTxtBox.Size = new System.Drawing.Size(437, 163);
             this.CodeSnippetTxtBox.TabIndex = 11;
             // 
@@ -392,17 +383,6 @@
             this.label18.TabIndex = 49;
             this.label18.Text = "Estimated time to fix in hours:";
             // 
-            // uploadCode
-            // 
-            this.uploadCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.uploadCode.Location = new System.Drawing.Point(103, 508);
-            this.uploadCode.Name = "uploadCode";
-            this.uploadCode.Size = new System.Drawing.Size(133, 36);
-            this.uploadCode.TabIndex = 50;
-            this.uploadCode.Text = "Upload Code";
-            this.uploadCode.UseVisualStyleBackColor = true;
-            this.uploadCode.Click += new System.EventHandler(this.uploadCode_Click);
-            // 
             // EtaTxtBox
             // 
             this.EtaTxtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
@@ -423,6 +403,7 @@
             // 
             // TesterTxtBox
             // 
+            this.TesterTxtBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.TesterTxtBox.FormattingEnabled = true;
             this.TesterTxtBox.Location = new System.Drawing.Point(247, 89);
             this.TesterTxtBox.MaxDropDownItems = 100;
@@ -430,41 +411,14 @@
             this.TesterTxtBox.Size = new System.Drawing.Size(288, 21);
             this.TesterTxtBox.TabIndex = 56;
             // 
-            // usersBindingSource
-            // 
-            this.usersBindingSource.DataMember = "Users";
-            this.usersBindingSource.DataSource = this.testerName;
-            // 
-            // testerName
-            // 
-            this.testerName.DataSetName = "TesterName";
-            this.testerName.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // AssignToTxtBox
             // 
+            this.AssignToTxtBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.AssignToTxtBox.FormattingEnabled = true;
             this.AssignToTxtBox.Location = new System.Drawing.Point(248, 279);
             this.AssignToTxtBox.Name = "AssignToTxtBox";
             this.AssignToTxtBox.Size = new System.Drawing.Size(288, 21);
             this.AssignToTxtBox.TabIndex = 57;
-            // 
-            // usersBindingSource1
-            // 
-            this.usersBindingSource1.DataMember = "Users";
-            this.usersBindingSource1.DataSource = this.assignedToName;
-            // 
-            // assignedToName
-            // 
-            this.assignedToName.DataSetName = "AssignedToName";
-            this.assignedToName.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // usersTableAdapter
-            // 
-            this.usersTableAdapter.ClearBeforeFill = true;
-            // 
-            // usersTableAdapter1
-            // 
-            this.usersTableAdapter1.ClearBeforeFill = true;
             // 
             // TesterDeveloperReportBug
             // 
@@ -510,7 +464,7 @@
             this.Controls.Add(this.label2);
             this.Name = "TesterDeveloperReportBug";
             this.Text = "Report Bug";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.WhiteBoxTester_FormClosing);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.TesterDeveloperReportBug_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -555,11 +509,5 @@
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.ComboBox TesterTxtBox;
         private System.Windows.Forms.ComboBox AssignToTxtBox;
-        private TesterName testerName;
-        private System.Windows.Forms.BindingSource usersBindingSource;
-        private TesterNameTableAdapters.UsersTableAdapter usersTableAdapter;
-        private AssignedToName assignedToName;
-        private System.Windows.Forms.BindingSource usersBindingSource1;
-        private AssignedToNameTableAdapters.UsersTableAdapter usersTableAdapter1;
     }
 }

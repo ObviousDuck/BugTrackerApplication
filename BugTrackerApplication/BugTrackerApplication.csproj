@@ -49,7 +49,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="ColorCode">
-      <HintPath>F:\BugTrackerApplication\BugTrackerApplication\ColorCode_1_0_2\ColorCode.dll</HintPath>
+      <HintPath>..\..\..\BugTrackerApplication\ColorCode_1_0_2\ColorCode.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -70,20 +70,13 @@
     <Compile Include="About.Designer.cs">
       <DependentUpon>About.cs</DependentUpon>
     </Compile>
-    <Compile Include="AssignedToName.cs">
-      <DependentUpon>AssignedToName.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="AssignedToName.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>AssignedToName.xsd</DependentUpon>
-    </Compile>
     <Compile Include="BugDetails.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="BugDetails.Designer.cs">
       <DependentUpon>BugDetails.cs</DependentUpon>
     </Compile>
+    <Compile Include="EstablishConnection.cs" />
     <Compile Include="Help.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,11 +120,6 @@
     </Compile>
     <Compile Include="Register.Designer.cs">
       <DependentUpon>Register.cs</DependentUpon>
-    </Compile>
-    <Compile Include="TesterName.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TesterName.xsd</DependentUpon>
     </Compile>
     <Compile Include="TesterDeveloperReportBug.cs">
       <SubType>Form</SubType>
@@ -178,18 +166,7 @@
     <EmbeddedResource Include="TesterDeveloperReportBug.resx">
       <DependentUpon>TesterDeveloperReportBug.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="AssignedToName.xsc">
-      <DependentUpon>AssignedToName.xsd</DependentUpon>
-    </None>
-    <None Include="AssignedToName.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>AssignedToName.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="AssignedToName.xss">
-      <DependentUpon>AssignedToName.xsd</DependentUpon>
-    </None>
-    <None Include="ClassDiagram1.cd" />
+    <None Include="UMLclassdiagram.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -199,17 +176,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="TesterName.xsc">
-      <DependentUpon>TesterName.xsd</DependentUpon>
-    </None>
-    <None Include="TesterName.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>TesterName.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="TesterName.xss">
-      <DependentUpon>TesterName.xsd</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

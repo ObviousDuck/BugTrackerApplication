@@ -149,6 +149,7 @@
             // 
             // txtTesterBox
             // 
+            this.txtTesterBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.txtTesterBox.FormattingEnabled = true;
             this.txtTesterBox.Location = new System.Drawing.Point(143, 102);
             this.txtTesterBox.MaxDropDownItems = 100;
@@ -158,6 +159,7 @@
             // 
             // txtAssignedTo
             // 
+            this.txtAssignedTo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.txtAssignedTo.FormattingEnabled = true;
             this.txtAssignedTo.Location = new System.Drawing.Point(143, 178);
             this.txtAssignedTo.Name = "txtAssignedTo";

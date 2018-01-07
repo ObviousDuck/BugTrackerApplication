@@ -10,6 +10,11 @@ using System.Windows.Forms;
 
 namespace BugTrackerApplication
 {
+
+    /// <summary>
+    /// Hides the main menu and shows the Help window.
+    /// On close, will show the main menu again.
+    /// </summary>
     public partial class Help : Form
     {
         BugTracker BugTracker;
@@ -25,7 +30,8 @@ namespace BugTrackerApplication
             BugTracker.Show();
         }
 
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        // Opens a browser when the link is clicked navigating to the project on GitHUb
+        private void GitHubLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             System.Diagnostics.Process.Start("https://github.com/ObviousDuck/BugTrackerApplication");
         }

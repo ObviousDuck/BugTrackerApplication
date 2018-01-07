@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.GitHubLink = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // label1
@@ -43,24 +43,24 @@
             this.label1.Text = "BugTracker is a tool made to log and view submitted bugs. \r\nIt hosts a variety of" +
     " features. For more information, please refer to the README on GitHub.";
             // 
-            // linkLabel1
+            // GitHubLink
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.Location = new System.Drawing.Point(12, 64);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(297, 14);
-            this.linkLabel1.TabIndex = 1;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "https://github.com/ObviousDuck/BugTrackerApplication";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            this.GitHubLink.AutoSize = true;
+            this.GitHubLink.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GitHubLink.Location = new System.Drawing.Point(12, 64);
+            this.GitHubLink.Name = "GitHubLink";
+            this.GitHubLink.Size = new System.Drawing.Size(297, 14);
+            this.GitHubLink.TabIndex = 1;
+            this.GitHubLink.TabStop = true;
+            this.GitHubLink.Text = "https://github.com/ObviousDuck/BugTrackerApplication";
+            this.GitHubLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.GitHubLink_LinkClicked);
             // 
             // Help
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(603, 101);
-            this.Controls.Add(this.linkLabel1);
+            this.Controls.Add(this.GitHubLink);
             this.Controls.Add(this.label1);
             this.Name = "Help";
             this.Text = "Help";
@@ -73,6 +73,6 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.LinkLabel GitHubLink;
     }
 }

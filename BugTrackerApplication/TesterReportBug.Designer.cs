@@ -221,6 +221,7 @@
             // 
             // TesterTxtBox
             // 
+            this.TesterTxtBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.TesterTxtBox.FormattingEnabled = true;
             this.TesterTxtBox.Location = new System.Drawing.Point(202, 83);
             this.TesterTxtBox.MaxDropDownItems = 100;
@@ -253,7 +254,7 @@
             this.Controls.Add(this.BlackBoxTesterTitle);
             this.Name = "TesterReportBug";
             this.Text = "Report Bug";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.BlackBoxReportBug_FormClosing);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.TesterReportBug_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 

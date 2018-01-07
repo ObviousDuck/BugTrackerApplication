@@ -1,0 +1,298 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="BugTrackerApplication.BugTracker">
+    <Position X="0.5" Y="3.25" Width="2.5" />
+    <Members>
+      <Field Name="aboutToolStripMenuItem" Hidden="true" />
+      <Field Name="aboutToolStripMenuItem1" Hidden="true" />
+      <Method Name="BugTracker" Hidden="true" />
+      <Field Name="BugTrackerTitle" Hidden="true" />
+      <Field Name="components" Hidden="true" />
+      <Field Name="contextMenuStrip1" Hidden="true" />
+      <Method Name="Dispose" Hidden="true" />
+      <Field Name="exitToolStripMenuItem" Hidden="true" />
+      <Field Name="fileToolStripMenuItem" Hidden="true" />
+      <Field Name="FindBugButton" Hidden="true" />
+      <Field Name="helpToolStripMenuItem" Hidden="true" />
+      <Field Name="helpToolStripMenuItem1" Hidden="true" />
+      <Field Name="helpToolStripMenuItem2" Hidden="true" />
+      <Method Name="InitializeComponent" Hidden="true" />
+      <Field Name="label1" Hidden="true" />
+      <Field Name="label2" Hidden="true" />
+      <Field Name="label3" Hidden="true" />
+      <Field Name="label4" Hidden="true" />
+      <Field Name="label5" Hidden="true" />
+      <Field Name="LoggedInAsLabel" Hidden="true" />
+      <Field Name="LoginBtn" Hidden="true" />
+      <Field Name="menuStrip1" Hidden="true" />
+      <Field Name="RegisterBtn" Hidden="true" />
+      <Field Name="ReportBugButton" Hidden="true" />
+      <Field Name="RoleLabel" Hidden="true" />
+      <Field Name="TesterBtn" Hidden="true" />
+      <Field Name="TesterDeveloperBtn" Hidden="true" />
+      <Method Name="WhiteBoxBtn_Click" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>BYCBIAAAACIFApQEEAiDBAACIIxAAAhAAgIAEAAAIgA=</HashCode>
+      <FileName>BugTracker.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BugTrackerApplication.Login">
+    <Position X="3.25" Y="1" Width="1.5" />
+    <Members>
+      <Field Name="BugTracker" Hidden="true" />
+      <Field Name="components" Hidden="true" />
+      <Method Name="Dispose" Hidden="true" />
+      <Method Name="InitializeComponent" Hidden="true" />
+      <Field Name="label1" Hidden="true" />
+      <Field Name="label2" Hidden="true" />
+      <Field Name="label3" Hidden="true" />
+      <Method Name="Login" Hidden="true" />
+      <Method Name="Login_FormClosing" Hidden="true" />
+      <Method Name="Login_KeyPress" Hidden="true" />
+      <Field Name="LoginButton" Hidden="true" />
+      <Method Name="LoginButton_Click" Hidden="true" />
+      <Field Name="mySqlConnection" Hidden="true" />
+      <Field Name="PasswordTxtBox" Hidden="true" />
+      <Field Name="UsernameTxtBox" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAADAAAAACAABBAAACCAAQACAAAEAEAAAACAAAAQAAA=</HashCode>
+      <FileName>Login.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BugTrackerApplication.Register">
+    <Position X="5" Y="1" Width="1.5" />
+    <Members>
+      <Field Name="BugTracker" Hidden="true" />
+      <Method Name="ClearTxtBoxes" Hidden="true" />
+      <Field Name="components" Hidden="true" />
+      <Method Name="Dispose" Hidden="true" />
+      <Method Name="InitializeComponent" Hidden="true" />
+      <Field Name="isAdminCheckBox" Hidden="true" />
+      <Field Name="label1" Hidden="true" />
+      <Field Name="label2" Hidden="true" />
+      <Field Name="label3" Hidden="true" />
+      <Field Name="label4" Hidden="true" />
+      <Field Name="mySqlConnection" Hidden="true" />
+      <Field Name="NameTxtBox" Hidden="true" />
+      <Field Name="PasswordTxtBox" Hidden="true" />
+      <Method Name="Register" Hidden="true" />
+      <Method Name="Register_FormClosing" Hidden="true" />
+      <Method Name="Register_KeyPress" Hidden="true" />
+      <Field Name="RegisterButton" Hidden="true" />
+      <Method Name="RegisterButton_Click" Hidden="true" />
+      <Field Name="UsernameTxtBox" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>EAACAAAAACAABBAAAGCAACAiAAAAAUAAAAIQAAAQAAA=</HashCode>
+      <FileName>Register.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BugTrackerApplication.TesterReportBug">
+    <Position X="6.75" Y="2.25" Width="2.5" />
+    <Members>
+      <Field Name="AttachmentTxtBox" Hidden="true" />
+      <Field Name="BlackBoxTesterTitle" Hidden="true" />
+      <Field Name="BugTracker" Hidden="true" />
+      <Field Name="cmd" Hidden="true" />
+      <Field Name="components" Hidden="true" />
+      <Field Name="ComponentTxtBox" Hidden="true" />
+      <Field Name="DescriptionTxtBox" Hidden="true" />
+      <Method Name="Dispose" Hidden="true" />
+      <Method Name="InitializeComponent" Hidden="true" />
+      <Field Name="label1" Hidden="true" />
+      <Field Name="label2" Hidden="true" />
+      <Field Name="label3" Hidden="true" />
+      <Field Name="label4" Hidden="true" />
+      <Field Name="label5" Hidden="true" />
+      <Field Name="label6" Hidden="true" />
+      <Field Name="label7" Hidden="true" />
+      <Field Name="label8" Hidden="true" />
+      <Field Name="mySqlCommand" Hidden="true" />
+      <Field Name="mySqlConnection" Hidden="true" />
+      <Field Name="mySqlDataReader" Hidden="true" />
+      <Field Name="ProjectTxtBox" Hidden="true" />
+      <Field Name="ReportBugButton" Hidden="true" />
+      <Field Name="SummaryLabel" Hidden="true" />
+      <Field Name="SummaryTxtBox" Hidden="true" />
+      <Method Name="TesterReportBug" Hidden="true" />
+      <Field Name="TesterTxtBox" Hidden="true" />
+      <Field Name="UploadAttachmentButton" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>oABCIAAAACAABBQAAJiiAAACSAEAAAAAAEEIAAQQAEA=</HashCode>
+      <FileName>TesterReportBug.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BugTrackerApplication.TesterDeveloperReportBug">
+    <Position X="9.75" Y="2.25" Width="3" />
+    <Members>
+      <Field Name="AssignToTxtBox" Hidden="true" />
+      <Field Name="AttachmentTxtBox" Hidden="true" />
+      <Field Name="BlackBoxTesterTitle" Hidden="true" />
+      <Field Name="BugTracker" Hidden="true" />
+      <Field Name="ClassTxtBox" Hidden="true" />
+      <Field Name="cmd" Hidden="true" />
+      <Field Name="CodeSnippetTxtBox" Hidden="true" />
+      <Field Name="components" Hidden="true" />
+      <Field Name="ComponentTxtBox" Hidden="true" />
+      <Field Name="DependenciesTxtBox" Hidden="true" />
+      <Field Name="DescriptionTxtBox" Hidden="true" />
+      <Method Name="Dispose" Hidden="true" />
+      <Field Name="EtaTxtBox" Hidden="true" />
+      <Method Name="InitializeComponent" Hidden="true" />
+      <Field Name="label1" Hidden="true" />
+      <Field Name="label10" Hidden="true" />
+      <Field Name="label11" Hidden="true" />
+      <Field Name="label12" Hidden="true" />
+      <Field Name="label13" Hidden="true" />
+      <Field Name="label14" Hidden="true" />
+      <Field Name="label15" Hidden="true" />
+      <Field Name="label16" Hidden="true" />
+      <Field Name="label17" Hidden="true" />
+      <Field Name="label18" Hidden="true" />
+      <Field Name="label2" Hidden="true" />
+      <Field Name="label20" Hidden="true" />
+      <Field Name="label3" Hidden="true" />
+      <Field Name="label4" Hidden="true" />
+      <Field Name="label5" Hidden="true" />
+      <Field Name="label6" Hidden="true" />
+      <Field Name="label7" Hidden="true" />
+      <Field Name="label8" Hidden="true" />
+      <Field Name="label9" Hidden="true" />
+      <Field Name="LineNumberTxtBox" Hidden="true" />
+      <Field Name="MethodTxtBox" Hidden="true" />
+      <Field Name="mySqlCommand" Hidden="true" />
+      <Field Name="mySqlConnection" Hidden="true" />
+      <Field Name="mySqlDataReader" Hidden="true" />
+      <Field Name="ProjectTxtBox" Hidden="true" />
+      <Field Name="ReportBugButton" Hidden="true" />
+      <Field Name="SummaryLabel" Hidden="true" />
+      <Field Name="SummaryTxtBox" Hidden="true" />
+      <Method Name="TesterDeveloperReportBug" Hidden="true" />
+      <Field Name="TesterTxtBox" Hidden="true" />
+      <Field Name="UploadAttachmentButton" Hidden="true" />
+      <Field Name="uploadCode" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>/wBCIAAAACABBBQBALijAAACGAEAAQAAAkEIAAQQAFA=</HashCode>
+      <FileName>TesterDeveloperReportBug.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BugTrackerApplication.TesterDeveloperViewBug">
+    <Position X="13.25" Y="2.25" Width="2.75" />
+    <Members>
+      <Field Name="BlackBoxTesterTitle" Hidden="true" />
+      <Field Name="btnSearch" Hidden="true" />
+      <Field Name="btnViewDetails" Hidden="true" />
+      <Field Name="BugTracker" Hidden="true" />
+      <Field Name="checkboxShowArchived" Hidden="true" />
+      <Field Name="cmd" Hidden="true" />
+      <Field Name="components" Hidden="true" />
+      <Method Name="Dispose" Hidden="true" />
+      <Method Name="InitializeComponent" Hidden="true" />
+      <Field Name="label1" Hidden="true" />
+      <Field Name="label2" Hidden="true" />
+      <Field Name="label3" Hidden="true" />
+      <Field Name="label4" Hidden="true" />
+      <Field Name="label5" Hidden="true" />
+      <Field Name="label6" Hidden="true" />
+      <Field Name="ListBoxBugs" Hidden="true" />
+      <Field Name="mySqlCommand" Hidden="true" />
+      <Field Name="mySqlConnection" Hidden="true" />
+      <Field Name="mySqlDataReader" Hidden="true" />
+      <Method Name="TesterDeveloperViewBug" Hidden="true" />
+      <Field Name="txtAssignedTo" Hidden="true" />
+      <Field Name="txtBugID" Hidden="true" />
+      <Field Name="txtProject" Hidden="true" />
+      <Field Name="txtTesterBox" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AABCAAAIECAAEFQAAACAIAACAAAQAAAwAEAAAAQQCkI=</HashCode>
+      <FileName>TesterDeveloperViewBug.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BugTrackerApplication.Help">
+    <Position X="3.5" Y="7.25" Width="2" />
+    <Members>
+      <Field Name="components" Hidden="true" />
+      <Method Name="Dispose" Hidden="true" />
+      <Field Name="GitHubLink" Hidden="true" />
+      <Method Name="Help" Hidden="true" />
+      <Method Name="InitializeComponent" Hidden="true" />
+      <Field Name="label1" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAACAAAAACAIABAAAACAAAACAEAAAAAAAAAAAAAgAAA=</HashCode>
+      <FileName>Help.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BugTrackerApplication.About">
+    <Position X="8.5" Y="6.25" Width="1.75" />
+    <Members>
+      <Method Name="About" Hidden="true" />
+      <Field Name="components" Hidden="true" />
+      <Method Name="Dispose" Hidden="true" />
+      <Method Name="InitializeComponent" Hidden="true" />
+      <Field Name="label1" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAACAAAAACAAABAAAACAAAACBAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>About.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BugTrackerApplication.BugDetails">
+    <Position X="12.75" Y="5" Width="2.25" />
+    <Members>
+      <Field Name="BlackBoxTesterTitle" Hidden="true" />
+      <Field Name="btnAddComment" Hidden="true" />
+      <Field Name="btnArchive" Hidden="true" />
+      <Field Name="btnSaveChanges" Hidden="true" />
+      <Field Name="btnViewSyntaxedCode" Hidden="true" />
+      <Method Name="BugDetails" Hidden="true" />
+      <Field Name="cmd" Hidden="true" />
+      <Field Name="components" Hidden="true" />
+      <Method Name="Dispose" Hidden="true" />
+      <Method Name="InitializeComponent" Hidden="true" />
+      <Field Name="label1" Hidden="true" />
+      <Field Name="mySqlCommand" Hidden="true" />
+      <Field Name="mySqlConnection" Hidden="true" />
+      <Field Name="mySqlDataReader" Hidden="true" />
+      <Field Name="radioCSharp" Hidden="true" />
+      <Field Name="radioHTML" Hidden="true" />
+      <Field Name="radioJava" Hidden="true" />
+      <Field Name="txtAddComment" Hidden="true" />
+      <Field Name="txtBugDetails" Hidden="true" />
+      <Field Name="txtComments" Hidden="true" />
+      <Field Name="txtSourceCode" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>ACFAAYAAkWgAAhQAAACAgAACAAAKAQBBAUIEAAwSAkA=</HashCode>
+      <FileName>BugDetails.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BugTrackerApplication.EstablishConnection">
+    <Position X="5.25" Y="5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAA=</HashCode>
+      <FileName>EstablishConnection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BugTrackerApplication.SyntaxedCode">
+    <Position X="11" Y="6.75" Width="1.5" />
+    <Members>
+      <Field Name="browserSyntaxedCode" Hidden="true" />
+      <Field Name="components" Hidden="true" />
+      <Method Name="Dispose" Hidden="true" />
+      <Field Name="folderBrowserDialog1" Hidden="true" />
+      <Method Name="InitializeComponent" Hidden="true" />
+      <Method Name="SyntaxedCode" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAACAAAAAAAACAAAACAAAAAAAAAAAAAIAAAAA=</HashCode>
+      <FileName>SyntaxedCode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

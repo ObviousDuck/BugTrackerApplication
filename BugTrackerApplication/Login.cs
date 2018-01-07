@@ -14,20 +14,31 @@ namespace BugTrackerApplication
 {
     public partial class Login : Form
     {
+        // Declare variables
         SqlConnection mySqlConnection;
         BugTracker BugTracker;
         string name;
 
+        /// <summary>
+        /// Initializes the components and establishes a connection with the database and opens it.
+        /// Hides the main menu.
+        /// </summary>
+        /// <param name="BugTracker"></param>
         public Login(BugTracker BugTracker)
         {
             InitializeComponent();
-            //string path = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=" + Application.StartupPath + "\\BugTrackerDB.mdf;Integrated Security=True";
-            mySqlConnection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=F:\BugTrackerApplication\BugTrackerDB.mdf;Integrated Security=True;Connect Timeout=30");
+            
+            mySqlConnection = new SqlConnection(EstablishConnection.SqlConnection);
             mySqlConnection.Open();
+
             this.BugTracker = BugTracker;
             BugTracker.Hide();
         }
 
+        /// <summary>
+        /// Compares entered values with those matching in the database and returns a result.
+        /// A message will show if the login is successful or not.
+        /// </summary>
         private void ConfirmLogin()
         {
             try
@@ -68,12 +79,18 @@ namespace BugTrackerApplication
             ConfirmLogin();
         }
 
+        /// <summary>
+        /// Close the Sql Connection and show the menu again once window is closed.
+        /// </summary>
         private void Login_FormClosing(object sender, FormClosingEventArgs e)
         {
             mySqlConnection.Close();
             BugTracker.Show();
         }
 
+        /// <summary>
+        /// Allows the Enter key to be pressed when user is on the Password field.
+        /// </summary>
         private void Login_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == 13)
