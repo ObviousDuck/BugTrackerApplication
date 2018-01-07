@@ -91,6 +91,7 @@ namespace BugTrackerApplication
             }
         }
 
+        // Opens the login form
         private void LoginBtn_Click(object sender, EventArgs e)
         {
             Login loginForm = new Login(this);
