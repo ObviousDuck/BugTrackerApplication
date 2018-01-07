@@ -322,7 +322,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label RoleLabel;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label LoggedInAsLabel;
+        public System.Windows.Forms.Label LoggedInAsLabel;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;

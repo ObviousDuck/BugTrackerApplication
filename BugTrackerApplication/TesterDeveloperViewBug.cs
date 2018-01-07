@@ -16,14 +16,15 @@ namespace BugTrackerApplication
         SqlConnection mySqlConnection;
         SqlCommand mySqlCommand;
         SqlDataReader mySqlDataReader;
-        String cmd;
+        String cmd, testerName;
         BugTracker BugTracker;
-        public TesterDeveloperViewBug(BugTracker BugTracker)
+        public TesterDeveloperViewBug(BugTracker BugTracker, String testerName)
         {
             InitializeComponent();
             mySqlConnection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=F:\BugTrackerApplication\BugTrackerDB.mdf;Integrated Security=True;Connect Timeout=30");
             mySqlConnection.Open();
             this.BugTracker = BugTracker;
+            this.testerName = testerName;
             BugTracker.Hide();
 
             try
@@ -92,7 +93,7 @@ namespace BugTrackerApplication
             if (!(string.IsNullOrEmpty(ListBoxBugs.Text)))
             {
                 String[] id = ListBoxBugs.Text.Split('-');
-                BugDetails BugDetails = new BugDetails(id[0], this);
+                BugDetails BugDetails = new BugDetails(id[0], BugTracker.LoggedInAsLabel.Text, this);
                 BugDetails.Owner = this;
                 BugDetails.Show();
             } else

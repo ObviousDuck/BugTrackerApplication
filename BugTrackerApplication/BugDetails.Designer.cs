@@ -32,7 +32,7 @@
             this.txtBugDetails = new System.Windows.Forms.RichTextBox();
             this.btnArchive = new System.Windows.Forms.Button();
             this.btnSaveChanges = new System.Windows.Forms.Button();
-            this.txtComment = new System.Windows.Forms.TextBox();
+            this.txtAddComment = new System.Windows.Forms.TextBox();
             this.btnAddComment = new System.Windows.Forms.Button();
             this.btnViewSyntaxedCode = new System.Windows.Forms.Button();
             this.txtSourceCode = new System.Windows.Forms.TextBox();
@@ -40,6 +40,7 @@
             this.radioHTML = new System.Windows.Forms.RadioButton();
             this.radioJava = new System.Windows.Forms.RadioButton();
             this.label1 = new System.Windows.Forms.Label();
+            this.txtComments = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
             // BlackBoxTesterTitle
@@ -65,7 +66,7 @@
             // btnArchive
             // 
             this.btnArchive.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.btnArchive.Location = new System.Drawing.Point(29, 576);
+            this.btnArchive.Location = new System.Drawing.Point(29, 755);
             this.btnArchive.Name = "btnArchive";
             this.btnArchive.Size = new System.Drawing.Size(118, 36);
             this.btnArchive.TabIndex = 59;
@@ -76,7 +77,7 @@
             // btnSaveChanges
             // 
             this.btnSaveChanges.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.btnSaveChanges.Location = new System.Drawing.Point(540, 600);
+            this.btnSaveChanges.Location = new System.Drawing.Point(540, 755);
             this.btnSaveChanges.Name = "btnSaveChanges";
             this.btnSaveChanges.Size = new System.Drawing.Size(118, 36);
             this.btnSaveChanges.TabIndex = 60;
@@ -84,18 +85,18 @@
             this.btnSaveChanges.UseVisualStyleBackColor = true;
             this.btnSaveChanges.Click += new System.EventHandler(this.btnSaveChanges_Click);
             // 
-            // txtComment
+            // txtAddComment
             // 
-            this.txtComment.Location = new System.Drawing.Point(29, 395);
-            this.txtComment.Multiline = true;
-            this.txtComment.Name = "txtComment";
-            this.txtComment.Size = new System.Drawing.Size(366, 133);
-            this.txtComment.TabIndex = 62;
+            this.txtAddComment.Location = new System.Drawing.Point(29, 564);
+            this.txtAddComment.Multiline = true;
+            this.txtAddComment.Name = "txtAddComment";
+            this.txtAddComment.Size = new System.Drawing.Size(366, 133);
+            this.txtAddComment.TabIndex = 62;
             // 
             // btnAddComment
             // 
             this.btnAddComment.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.btnAddComment.Location = new System.Drawing.Point(29, 534);
+            this.btnAddComment.Location = new System.Drawing.Point(29, 713);
             this.btnAddComment.Name = "btnAddComment";
             this.btnAddComment.Size = new System.Drawing.Size(118, 36);
             this.btnAddComment.TabIndex = 63;
@@ -106,7 +107,7 @@
             // btnViewSyntaxedCode
             // 
             this.btnViewSyntaxedCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.btnViewSyntaxedCode.Location = new System.Drawing.Point(416, 600);
+            this.btnViewSyntaxedCode.Location = new System.Drawing.Point(416, 755);
             this.btnViewSyntaxedCode.Name = "btnViewSyntaxedCode";
             this.btnViewSyntaxedCode.Size = new System.Drawing.Size(118, 36);
             this.btnViewSyntaxedCode.TabIndex = 66;
@@ -119,14 +120,14 @@
             this.txtSourceCode.Location = new System.Drawing.Point(416, 67);
             this.txtSourceCode.Multiline = true;
             this.txtSourceCode.Name = "txtSourceCode";
-            this.txtSourceCode.Size = new System.Drawing.Size(480, 461);
+            this.txtSourceCode.Size = new System.Drawing.Size(480, 630);
             this.txtSourceCode.TabIndex = 67;
             // 
             // radioCSharp
             // 
             this.radioCSharp.AutoSize = true;
             this.radioCSharp.Checked = true;
-            this.radioCSharp.Location = new System.Drawing.Point(419, 567);
+            this.radioCSharp.Location = new System.Drawing.Point(419, 722);
             this.radioCSharp.Name = "radioCSharp";
             this.radioCSharp.Size = new System.Drawing.Size(39, 17);
             this.radioCSharp.TabIndex = 68;
@@ -137,7 +138,7 @@
             // radioHTML
             // 
             this.radioHTML.AutoSize = true;
-            this.radioHTML.Location = new System.Drawing.Point(464, 567);
+            this.radioHTML.Location = new System.Drawing.Point(464, 722);
             this.radioHTML.Name = "radioHTML";
             this.radioHTML.Size = new System.Drawing.Size(55, 17);
             this.radioHTML.TabIndex = 69;
@@ -147,7 +148,7 @@
             // radioJava
             // 
             this.radioJava.AutoSize = true;
-            this.radioJava.Location = new System.Drawing.Point(525, 567);
+            this.radioJava.Location = new System.Drawing.Point(525, 722);
             this.radioJava.Name = "radioJava";
             this.radioJava.Size = new System.Drawing.Size(48, 17);
             this.radioJava.TabIndex = 70;
@@ -158,17 +159,26 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(416, 545);
+            this.label1.Location = new System.Drawing.Point(416, 700);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(218, 17);
             this.label1.TabIndex = 71;
             this.label1.Text = "Please select the language used:";
             // 
+            // txtComments
+            // 
+            this.txtComments.Location = new System.Drawing.Point(29, 383);
+            this.txtComments.Name = "txtComments";
+            this.txtComments.Size = new System.Drawing.Size(366, 175);
+            this.txtComments.TabIndex = 72;
+            this.txtComments.Text = "";
+            // 
             // BugDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(917, 654);
+            this.ClientSize = new System.Drawing.Size(917, 803);
+            this.Controls.Add(this.txtComments);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.radioJava);
             this.Controls.Add(this.radioHTML);
@@ -176,7 +186,7 @@
             this.Controls.Add(this.txtSourceCode);
             this.Controls.Add(this.btnViewSyntaxedCode);
             this.Controls.Add(this.btnAddComment);
-            this.Controls.Add(this.txtComment);
+            this.Controls.Add(this.txtAddComment);
             this.Controls.Add(this.btnSaveChanges);
             this.Controls.Add(this.btnArchive);
             this.Controls.Add(this.txtBugDetails);
@@ -195,7 +205,7 @@
         private System.Windows.Forms.RichTextBox txtBugDetails;
         private System.Windows.Forms.Button btnArchive;
         private System.Windows.Forms.Button btnSaveChanges;
-        private System.Windows.Forms.TextBox txtComment;
+        private System.Windows.Forms.TextBox txtAddComment;
         private System.Windows.Forms.Button btnAddComment;
         private System.Windows.Forms.Button btnViewSyntaxedCode;
         private System.Windows.Forms.TextBox txtSourceCode;
@@ -203,5 +213,6 @@
         private System.Windows.Forms.RadioButton radioHTML;
         private System.Windows.Forms.RadioButton radioJava;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.RichTextBox txtComments;
     }
 }

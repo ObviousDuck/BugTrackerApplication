@@ -49,7 +49,6 @@ namespace BugTrackerApplication
             if (TesterType == 1)
             {
                 TesterReportBug TesterReportBug = new TesterReportBug(this);
-                //TesterReportBug.Owner = this;
                 TesterReportBug.Show();
             }
 
@@ -76,7 +75,7 @@ namespace BugTrackerApplication
                 if (isLoggedIn == true)
                 {
                     Login loginForm = new Login(this);
-                    TesterDeveloperViewBug developerViewBug = new TesterDeveloperViewBug(this);
+                    TesterDeveloperViewBug developerViewBug = new TesterDeveloperViewBug(this, LoggedInAsLabel.Text);
                     developerViewBug.Show();
                 }
                 else

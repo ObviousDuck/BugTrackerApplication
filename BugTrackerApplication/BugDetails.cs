@@ -18,18 +18,20 @@ namespace BugTrackerApplication
         SqlConnection mySqlConnection;
         SqlCommand mySqlCommand;
         SqlDataReader mySqlDataReader;
-        String cmd, id;
+        String cmd, id, testerName;
         TesterDeveloperViewBug ViewBug;
 
-        public BugDetails(String id, TesterDeveloperViewBug ViewBug)
+        public BugDetails(String id, String testerName, TesterDeveloperViewBug ViewBug)
         {
             InitializeComponent();
             this.id = id;
+            this.testerName = testerName;
             mySqlConnection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=F:\BugTrackerApplication\BugTrackerDB.mdf;Integrated Security=True;Connect Timeout=30");
             mySqlConnection.Open();
             this.ViewBug = ViewBug;
             ViewBug.Hide();
             LoadBug();
+            LoadComments();
         }
 
         public void LoadBug()
@@ -55,11 +57,9 @@ namespace BugTrackerApplication
                         "\\b CLASS: \\par\\b0 " + mySqlDataReader["Class"] + "\\par\\par" +
                         "\\b METHOD: \\par\\b0 " + mySqlDataReader["Method"] + "\\par\\par" +
                         "\\b LINE NUMBER: \\par\\b0 " + mySqlDataReader["LineNumber"] + "\\par\\par" +
-                        "\\b DESCRIPTION: \\par\\b0 " + mySqlDataReader["Description"] + "\\par\\par" +
-                        "\\b COMMENT: \\par\\b0 " + mySqlDataReader["Comment"] + "\\par\\par";
+                        "\\b DESCRIPTION: \\par\\b0 " + mySqlDataReader["Description"] + "\\par\\par";
 
                     txtBugDetails.Rtf = @"{" + bugDetails + "}";
-
                     txtSourceCode.Text = (string)mySqlDataReader["CodeSnippet"];
                 }
                 mySqlDataReader.Close();
@@ -71,14 +71,41 @@ namespace BugTrackerApplication
             }
         }
 
-        public void UpdateComment()
+        public void LoadComments()
         {
             try
             {
-                cmd = "UPDATE Bugs SET Comment = @comment WHERE Id =" + id;
+
+                cmd = "SELECT * FROM Comments WHERE BugId=" + id;
                 mySqlCommand = new SqlCommand(cmd, mySqlConnection);
-                mySqlCommand.Parameters.AddWithValue("@comment", txtComment.Text);
-                mySqlCommand.ExecuteNonQuery();
+                string rtfString = "\\rtf1\\pc";
+                mySqlDataReader = mySqlCommand.ExecuteReader();
+
+                while (mySqlDataReader.Read())
+                {
+                    rtfString += "\\b TESTER:\\b0  " + mySqlDataReader["Author"] + "\\par\\b DATE LOGGED:\\b0  " + mySqlDataReader["DateLogged"] + "\\par\\b COMMENT:\\b0\\par " + mySqlDataReader["Comment"] + "\\par\\par";
+                }
+                txtComments.Rtf = @"{" + rtfString + "}";
+                mySqlDataReader.Close();
+            }
+
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message, Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public void AddCommment()
+        {
+            try
+            {
+                cmd = "INSERT INTO Comments (DateLogged, Author, Comment, BugId) VALUES ('"
+                    + DateTime.Now.ToString("dd-MM-yy HH:mm") + "', '" +  testerName + "', '" + txtAddComment.Text.ToString() + "', '" + id + "')";
+
+                mySqlCommand = new SqlCommand(cmd, mySqlConnection);
+                mySqlDataReader = mySqlCommand.ExecuteReader();
+                mySqlDataReader.Close();
+
             }
 
             catch (SqlException ex)
@@ -142,9 +169,11 @@ namespace BugTrackerApplication
 
         private void btnAddComment_Click(object sender, EventArgs e)
         {
-            UpdateComment();
+            //UpdateComment();
+            AddCommment();
             LoadBug();
-            txtComment.Text = "";
+            LoadComments();
+            txtAddComment.Text = "";
         }
 
         private void btnArchive_Click(object sender, EventArgs e)
