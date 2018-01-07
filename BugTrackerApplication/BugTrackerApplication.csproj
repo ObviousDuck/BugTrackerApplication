@@ -64,6 +64,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
     <Compile Include="AssignedToName.cs">
       <DependentUpon>AssignedToName.xsd</DependentUpon>
     </Compile>
@@ -77,6 +83,12 @@
     </Compile>
     <Compile Include="BugDetails.Designer.cs">
       <DependentUpon>BugDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Help.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Help.Designer.cs">
+      <DependentUpon>Help.cs</DependentUpon>
     </Compile>
     <Compile Include="SyntaxedCode.cs">
       <SubType>Form</SubType>
@@ -127,8 +139,14 @@
     <Compile Include="TesterDeveloperReportBug.Designer.cs">
       <DependentUpon>TesterDeveloperReportBug.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BugDetails.resx">
       <DependentUpon>BugDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Help.resx">
+      <DependentUpon>Help.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SyntaxedCode.resx">
       <DependentUpon>SyntaxedCode.cs</DependentUpon>

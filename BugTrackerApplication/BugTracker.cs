@@ -49,14 +49,13 @@ namespace BugTrackerApplication
             if (TesterType == 1)
             {
                 TesterReportBug TesterReportBug = new TesterReportBug(this);
-                TesterReportBug.Owner = this;
+                //TesterReportBug.Owner = this;
                 TesterReportBug.Show();
             }
 
             else if (TesterType == 2)
             {
                 TesterDeveloperReportBug TesterDeveloperReportBug = new TesterDeveloperReportBug(this);
-                TesterDeveloperReportBug.Owner = this;
                 TesterDeveloperReportBug.Show();
             }
             else
@@ -78,7 +77,6 @@ namespace BugTrackerApplication
                 {
                     Login loginForm = new Login(this);
                     TesterDeveloperViewBug developerViewBug = new TesterDeveloperViewBug(this);
-                    developerViewBug.Owner = this;
                     developerViewBug.Show();
                 }
                 else
@@ -96,7 +94,6 @@ namespace BugTrackerApplication
         private void LoginBtn_Click(object sender, EventArgs e)
         {
             Login loginForm = new Login(this);
-            loginForm.Owner = this;
             loginForm.Show();
         }
 
@@ -105,13 +102,29 @@ namespace BugTrackerApplication
             if (isLoggedIn == true && isAdmin == 1)
             { 
             Register registerForm = new Register(this);
-            registerForm.Owner = this;
             registerForm.Show();
             }
             else
             {
                 MessageBox.Show("Admin rights required to register a new user, please login with an administrator account.");
             }
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void helpToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            Help helpForm = new Help(this);
+            helpForm.Show();
+        }
+
+        private void aboutToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            About aboutForm = new About(this);
+            aboutForm.Show();
         }
     }
 }
