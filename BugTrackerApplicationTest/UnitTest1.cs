@@ -42,8 +42,5 @@ namespace BugTrackerApplicationTest
 
             Assert.AreEqual(0, obj.Invoke("checkInputs"));
         }
-        
-
-
     }
 }
