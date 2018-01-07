@@ -11,7 +11,8 @@ using System.Windows.Forms;
 namespace BugTrackerApplication
 {
     /// <summary>
-    /// 
+    /// Main menu form.
+    /// Variables here passes information to other places of the program.
     /// </summary>
     public partial class BugTracker : Form
     {
@@ -22,17 +23,25 @@ namespace BugTrackerApplication
         // SET TO 0
         public int isAdmin = 1;
 
+        /// <summary>
+        /// Initializes the components of the form.
+        /// </summary>
         public BugTracker()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Changes the label on the menu to show who is currently logged in. 
+        /// This is stored in a name variable which is passed along to other forms.
+        /// </summary>
+        /// <param name="name"></param>
         public void setLoggedInLabel(string name)
         {
             LoggedInAsLabel.Text = name;
         }
 
-        public void BlackBoxBtn_Click(object sender, EventArgs e)
+        public void TesterBtn_Click(object sender, EventArgs e)
         {
             TesterType = 1;
             RoleLabel.Text = "Tester";

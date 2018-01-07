@@ -65,7 +65,7 @@
             this.TesterBtn.TabIndex = 0;
             this.TesterBtn.Text = "Tester";
             this.TesterBtn.UseVisualStyleBackColor = true;
-            this.TesterBtn.Click += new System.EventHandler(this.BlackBoxBtn_Click);
+            this.TesterBtn.Click += new System.EventHandler(this.TesterBtn_Click);
             // 
             // BugTrackerTitle
             // 
@@ -309,29 +309,29 @@
 
         #endregion
 
-        private System.Windows.Forms.Label BugTrackerTitle;
+        public System.Windows.Forms.Label BugTrackerTitle;
         public System.Windows.Forms.Button TesterBtn;
         public System.Windows.Forms.Button TesterDeveloperBtn;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button ReportBugButton;
-        private System.Windows.Forms.Button FindBugButton;
-        private System.Windows.Forms.Button LoginBtn;
-        private System.Windows.Forms.Button RegisterBtn;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label RoleLabel;
-        private System.Windows.Forms.Label label5;
+        public System.Windows.Forms.Label label1;
+        public System.Windows.Forms.Label label2;
+        public System.Windows.Forms.Label label3;
+        public System.Windows.Forms.Button ReportBugButton;
+        public System.Windows.Forms.Button FindBugButton;
+        public System.Windows.Forms.Button LoginBtn;
+        public System.Windows.Forms.Button RegisterBtn;
+        public System.Windows.Forms.Label label4;
+        public System.Windows.Forms.Label RoleLabel;
+        public System.Windows.Forms.Label label5;
         public System.Windows.Forms.Label LoggedInAsLabel;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem2;
-        private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem1;
+        public System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        public System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
+        public System.Windows.Forms.MenuStrip menuStrip1;
+        public System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem1;
+        public System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem2;
+        public System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem1;
     }
 }
 

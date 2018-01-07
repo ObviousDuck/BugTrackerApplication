@@ -28,7 +28,12 @@ namespace BugTrackerApplication
             mySqlConnection.Open();
             this.BugTracker = BugTracker;
             BugTracker.Hide();
+            PopulateUserList();
+            
+        }
 
+        public void PopulateUserList()
+        {
             try
             {
                 cmd = "SELECT Name FROM Users";
@@ -48,9 +53,8 @@ namespace BugTrackerApplication
             }
         }
         
-        public bool checkInputs()
+        public int checkInputs()
         {
-            bool rtnvalue = true;
             try
             {
                 if 
@@ -61,7 +65,7 @@ namespace BugTrackerApplication
                     string.IsNullOrEmpty(SummaryTxtBox.Text))
                 {
                     MessageBox.Show("Please fill in all the required fields before submitting the bug report.");
-                    rtnvalue = false;
+                    return 0;
                 }
 
                 else
@@ -88,7 +92,7 @@ namespace BugTrackerApplication
                 MessageBox.Show(ex.Message, Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            return (rtnvalue);
+            return 1;
         }
 
         public void ClearTxtBoxes(Control.ControlCollection cc)

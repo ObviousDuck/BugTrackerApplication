@@ -151,13 +151,5 @@ namespace BugTrackerApplication
         {
             checkInputs();
         }
-
-        private void WhiteBoxReportBug_Load(object sender, EventArgs e)
-        {
-            // TODO: This line of code loads data into the 'assignedToName.Users' table. You can move, or remove it, as needed.
-            this.usersTableAdapter1.Fill(this.assignedToName.Users);
-            // TODO: This line of code loads data into the 'testerName.Users' table. You can move, or remove it, as needed.
-            this.usersTableAdapter.Fill(this.testerName.Users);
-        }
     }
 }

@@ -511,11 +511,6 @@
             this.Name = "TesterDeveloperReportBug";
             this.Text = "Report Bug";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.WhiteBoxTester_FormClosing);
-            this.Load += new System.EventHandler(this.WhiteBoxReportBug_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.testerName)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.assignedToName)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -261,23 +261,23 @@
 
         #endregion
 
-        private System.Windows.Forms.Label BlackBoxTesterTitle;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox ProjectTxtBox;
-        private System.Windows.Forms.TextBox ComponentTxtBox;
-        private System.Windows.Forms.TextBox DescriptionTxtBox;
-        private System.Windows.Forms.Button UploadAttachmentButton;
-        private System.Windows.Forms.Button ReportBugButton;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label SummaryLabel;
-        private System.Windows.Forms.TextBox SummaryTxtBox;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox AttachmentTxtBox;
-        private System.Windows.Forms.ComboBox TesterTxtBox;
+        public System.Windows.Forms.Label BlackBoxTesterTitle;
+        public System.Windows.Forms.Label label2;
+        public System.Windows.Forms.Label label3;
+        public System.Windows.Forms.Label label1;
+        public System.Windows.Forms.Label label4;
+        public System.Windows.Forms.TextBox ProjectTxtBox;
+        public System.Windows.Forms.TextBox ComponentTxtBox;
+        public System.Windows.Forms.TextBox DescriptionTxtBox;
+        public System.Windows.Forms.Button UploadAttachmentButton;
+        public System.Windows.Forms.Button ReportBugButton;
+        public System.Windows.Forms.Label label5;
+        public System.Windows.Forms.Label label6;
+        public System.Windows.Forms.Label label7;
+        public System.Windows.Forms.Label SummaryLabel;
+        public System.Windows.Forms.TextBox SummaryTxtBox;
+        public System.Windows.Forms.Label label8;
+        public System.Windows.Forms.TextBox AttachmentTxtBox;
+        public System.Windows.Forms.ComboBox TesterTxtBox;
     }
 }
