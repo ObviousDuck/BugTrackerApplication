@@ -20,7 +20,7 @@ namespace BugTrackerApplication
         public int TesterType;
 
         // Can be set to true for testing purposes to avoid having to log in.
-        public bool isLoggedIn = true;
+        public bool isLoggedIn = false;
 
         // Can be set to 1 for testing purposes to always have admin rights for the purpose of registering new users.
         public int isAdmin = 0;
