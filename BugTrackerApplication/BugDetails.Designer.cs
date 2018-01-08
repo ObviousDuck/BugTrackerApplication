@@ -123,6 +123,7 @@
             this.txtSourceCode.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.txtSourceCode.Size = new System.Drawing.Size(480, 630);
             this.txtSourceCode.TabIndex = 67;
+            this.txtSourceCode.Text = "No source code available.";
             // 
             // radioCSharp
             // 

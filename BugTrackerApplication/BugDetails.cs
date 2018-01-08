@@ -71,23 +71,37 @@ namespace BugTrackerApplication
 
                     txtBugDetails.Rtf = @"{" + bugDetails + "}";
 
+                    
                     // Puts CodeSnippet into its own separate textbox if available.
-                    //if (!string.IsNullOrEmpty(txtSourceCode.Text))
-                    //{
-                        txtSourceCode.Text = (string)mySqlDataReader["CodeSnippet"];
-                    //} 
+                    if (!string.IsNullOrEmpty(txtSourceCode.Text))
+                    {
+                        //txtSourceCode.Text = (String)mySqlDataReader["CodeSnippet"];
+                        String intermediate = (String)mySqlDataReader["CodeSnippet"];
+                        txtSourceCode.Text = intermediate;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Please enter the source code!"); 
+                    }
                 }
 
                 // Closes the data reader
                 mySqlDataReader.Close();
             }
-
             // Throws SqlException if above fails and puts error in MessageBox.
             catch (SqlException ex)
             {
                 MessageBox.Show(ex.Message, Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        //public void LoadBugCodeSnippet()
+        //{
+        //    cmd = "SELECT * FROM Bugs WHERE ID=" + id;
+        //    mySqlCommand = new SqlCommand(cmd, mySqlConnection);
+        //    mySqlDataReader = mySqlCommand.ExecuteReader();
+        //}
+
+           
 
         /// <summary>
         /// Loads up comments from the Comments table and outputs these to a textbox.

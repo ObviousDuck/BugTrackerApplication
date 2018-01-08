@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="BugTrackerApplication.BugTracker">
-    <Position X="0.5" Y="3.25" Width="2.5" />
+    <Position X="0.75" Y="3.25" Width="2.5" />
     <Members>
       <Field Name="aboutToolStripMenuItem" Hidden="true" />
       <Field Name="aboutToolStripMenuItem1" Hidden="true" />
@@ -38,7 +38,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="BugTrackerApplication.Login">
-    <Position X="3.25" Y="1" Width="1.5" />
+    <Position X="4" Y="1.5" Width="1.5" />
     <Members>
       <Field Name="BugTracker" Hidden="true" />
       <Field Name="components" Hidden="true" />
@@ -62,7 +62,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="BugTrackerApplication.Register">
-    <Position X="5" Y="1" Width="1.5" />
+    <Position X="6.25" Y="0.5" Width="1.5" />
     <Members>
       <Field Name="BugTracker" Hidden="true" />
       <Method Name="ClearTxtBoxes" Hidden="true" />
@@ -90,7 +90,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="BugTrackerApplication.TesterReportBug">
-    <Position X="6.75" Y="2.25" Width="2.5" />
+    <Position X="6.75" Y="2.5" Width="2.5" />
     <Members>
       <Field Name="AttachmentTxtBox" Hidden="true" />
       <Field Name="BlackBoxTesterTitle" Hidden="true" />
@@ -126,7 +126,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="BugTrackerApplication.TesterDeveloperReportBug">
-    <Position X="9.75" Y="2.25" Width="3" />
+    <Position X="5.25" Y="7" Width="3" />
     <Members>
       <Field Name="AssignToTxtBox" Hidden="true" />
       <Field Name="AttachmentTxtBox" Hidden="true" />
@@ -176,12 +176,12 @@
       <Field Name="uploadCode" Hidden="true" />
     </Members>
     <TypeIdentifier>
-      <HashCode>/wBCIAAAACABBBQBALijAAACGAEAAQAAAkEIAAQQAFA=</HashCode>
+      <HashCode>/wBCIAAAACABDBQBALijAAACGAEAAAAAAEEIAAQQAFA=</HashCode>
       <FileName>TesterDeveloperReportBug.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="BugTrackerApplication.TesterDeveloperViewBug">
-    <Position X="13.25" Y="2.25" Width="2.75" />
+    <Position X="9.75" Y="7" Width="2.75" />
     <Members>
       <Field Name="BlackBoxTesterTitle" Hidden="true" />
       <Field Name="btnSearch" Hidden="true" />
@@ -209,12 +209,12 @@
       <Field Name="txtTesterBox" Hidden="true" />
     </Members>
     <TypeIdentifier>
-      <HashCode>AABCAAAIECAAEFQAAACAIAACAAAQAAAwAEAAAAQQCkI=</HashCode>
+      <HashCode>AABCAAAIECAAGFQAAACAIAACAAAQAAAwAEAAAAQQCkI=</HashCode>
       <FileName>TesterDeveloperViewBug.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="BugTrackerApplication.Help">
-    <Position X="3.5" Y="7.25" Width="2" />
+    <Position X="2.25" Y="7.5" Width="2" />
     <Members>
       <Field Name="components" Hidden="true" />
       <Method Name="Dispose" Hidden="true" />
@@ -229,7 +229,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="BugTrackerApplication.About">
-    <Position X="8.5" Y="6.25" Width="1.75" />
+    <Position X="0.5" Y="7.5" Width="1.75" />
     <Members>
       <Method Name="About" Hidden="true" />
       <Field Name="components" Hidden="true" />
@@ -243,7 +243,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="BugTrackerApplication.BugDetails">
-    <Position X="12.75" Y="5" Width="2.25" />
+    <Position X="12" Y="2.5" Width="2.25" />
     <Members>
       <Field Name="BlackBoxTesterTitle" Hidden="true" />
       <Field Name="btnAddComment" Hidden="true" />
@@ -273,14 +273,14 @@
     </TypeIdentifier>
   </Class>
   <Class Name="BugTrackerApplication.EstablishConnection">
-    <Position X="5.25" Y="5" Width="1.75" />
+    <Position X="5.75" Y="5" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAA=</HashCode>
       <FileName>EstablishConnection.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="BugTrackerApplication.SyntaxedCode">
-    <Position X="11" Y="6.75" Width="1.5" />
+    <Position X="12.5" Y="1" Width="1.5" />
     <Members>
       <Field Name="browserSyntaxedCode" Hidden="true" />
       <Field Name="components" Hidden="true" />
